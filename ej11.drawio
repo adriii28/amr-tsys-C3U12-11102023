@@ -1,15 +1,13 @@
-<mxfile host="app.diagrams.net" modified="2023-10-13T17:45:59.437Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="Bb5047XOPdI0VRrD5fNa" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-13T17:46:38.990Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="yuKKDbQeXDxHbL9skmb1" version="22.0.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="2524" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="2284" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="EjmE4dH1lIwyOp4UtHEW-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4uOpSv_W2-PF2tA6NTpi-1" target="I-bC4B51rT9jSOVttmfx-7" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="230" y="300" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="1NhOonn5GkANiXKk_Qiq-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4uOpSv_W2-PF2tA6NTpi-1" target="EjmE4dH1lIwyOp4UtHEW-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4uOpSv_W2-PF2tA6NTpi-1" value="Accidente Geografico" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="4uOpSv_W2-PF2tA6NTpi-1" value="Accidente Geografico" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="160" y="200" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4uOpSv_W2-PF2tA6NTpi-2" value="Rio&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -187,12 +185,6 @@
         </mxCell>
         <mxCell id="I-bC4B51rT9jSOVttmfx-6" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="290" y="430" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="EjmE4dH1lIwyOp4UtHEW-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="I-bC4B51rT9jSOVttmfx-7" target="EjmE4dH1lIwyOp4UtHEW-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="I-bC4B51rT9jSOVttmfx-7" value="afecta" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="190" y="280" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="EjmE4dH1lIwyOp4UtHEW-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="EjmE4dH1lIwyOp4UtHEW-4" target="4uOpSv_W2-PF2tA6NTpi-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
