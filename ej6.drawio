@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-13T18:30:15.508Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="BBJjFIh93Ez8cuGWUYjS" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-13T18:31:48.102Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="fIrbkwu5_ryICq4yn5C2" version="22.0.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="989" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -243,7 +243,7 @@
         <mxCell id="sgaFnyZZiUt3jDesd7pH-24" value="1&lt;br&gt;N&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="250" y="370" width="30" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="sgaFnyZZiUt3jDesd7pH-25" value="N&lt;br&gt;1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="sgaFnyZZiUt3jDesd7pH-25" value="0&lt;br&gt;N" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="215" y="545" width="30" height="40" as="geometry" />
         </mxCell>
         <mxCell id="sgaFnyZZiUt3jDesd7pH-26" value="1&lt;br&gt;&lt;br&gt;1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
