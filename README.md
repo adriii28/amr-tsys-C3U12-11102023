@@ -1,5 +1,7 @@
 # Ejercicios E/R
 
+**Puedes acceder a cada modelo relacional en el siguiente enlace:** [Modelo Relacional](https://github.com/adriii28/amr-tsys-C3U12-11102023/blob/dev/Modelo_Relacional.txt)
+
 En este repositorio, encontrarás diseños entidad-relación (E/R) para diversos escenarios. Estos ejercicios E/R representan diferentes situaciones y entidades, y han sido diseñados siguiendo una serie de premisas. A continuación, se describen brevemente los ejercicios:
 
 ## Ejercicio 1: Biblioteca v1
