@@ -1,0 +1,145 @@
+Ta12
+
+
+2.-
+Curso(id, horas, programa, titulo)
+Profesor(dni, direccion, nombre, telefono, apellidos,id_curso)
+Trabajador(DNI, CIF, direccion telefono, nombre_empresa)
+Alumno(dni, edad, dirección, nombre, teléfono)
+asistir(dni_alumno, codigo_curso, dni_trabajador)
+Nota(id, calificación, observaciones,dni_alumno) 
+
+3.-
+Capital_Comunidad(nombre, localidad)
+Comunidad Autonoma(Nombre,Poblacion, Superficie,nombre_capital_com)
+Capital_Provincia(CP, Nombre)
+Provincia(cp, nombre, poblacion, superficie,nombre_comunidad_auton,CP_cap_prov)
+Localidad(nombre, poblacion,cp_provincia)
+
+
+4.-
+Guerra (id, nombre, año_empieza, año termina, paises_contendientes )
+Bando (id, nombre,id_guerra,bando_ganador)
+País (id, nombre, año_anexion, id_bando)
+independizarse(id_pais_indep, id_pais_orig)
+
+5.-
+Almacén(número, descripción, dirección)
+Estantería(nombre_estanteria, numero_almacen)
+Pieza(id, tipo, modelo, descripcion, precio, nombre_estanteria)
+compuesta(id_piza_fin, id_pieza_comp)
+
+6.-
+Socio(DNI, Nombre, Apellidos, Codigo_Socio, Direccion)
+Telefono(numero_tlf, dni)
+Préstamo(id, fecha_devolucion, fecha_prestamo, DNI)
+Autor(dni, nombre, pais)
+Articulo(Id, nombre, comentario_deterioro, esta_deteriorado, año, resumen, id_prestamo,dni_autor)
+Libro(id_articulo, num_pag)
+Pelicula(id_articulo, nºcanciones)
+CD(id_articulo, duracion)
+
+7.-
+Contrato (ID, Codigo_categoria, F.Inicio, F.Final)
+Departamento(codigo, nombre)
+Empleado(dni, num_seg_social, codigo_trabajador, nombre, apellido, telefono, direccion, codigo_departamento)
+responsable(DNI_responsable,DNI_novato)
+Nomina(id, fecha, salario,id_contrato, dni_empleado)
+
+8.-
+Clientes(dni, nombre, apellidos, direccion, tarjeta_credito)
+Tarjeta Embarque(num_tarjeta,tarjeta_credito, dni_cliente)
+Vuelo (id, horsalida, fecha_salida, fecha_llegada, hora_llegada, hora_salida, id_arop_salir, id_arop_llegar)
+Avion(id_avion,num_plazas, id_plaza, id_vuelo)
+Plaza(id_plaza, fecha_reserva)
+Aeropuerto(id, nombre, localidad, pais)
+
+9.-
+Ingredientes(id, tipo_ingrediente, nombre_ingrediente)
+Cocinero(DNI, nombre)
+Receta(nombre_receta, dificultad, num_personas, tiempo_preparacion, dni_cocinero)
+Ingredientes(id, tipo, nombre)
+tener(id_ingrediente, nombre_receta, cantidad)
+Utensilios(id, nombre)
+usar(nombre_receta, id_utensilio, cantidad)
+
+10.-
+Liga(nombre, fecha_incio, fecha_fin)
+Partidos(id_partido, estadio, equipo1, equipo2, fecha_partido, nombre_liga)
+Equipo(id, pais, entrenador, nombre)
+juega (id_partido, id_equipo)
+Jugador(dni, posicion, f.nacimiento, nombre, id_equipo)
+
+11.-
+Pais(id, nombre,extension,poblacion)
+Montaña(Altura,id_sitio)
+Lago(Extension,id_sitio)
+Rio(Longitud,id_sitio)
+Accidente Geográfico(id, nombre, posicion_vertical, posicion_horizontal,id_sitio)
+Localidad(Id, nombre) 
+pasar(id_sitio.rio, id_localidad)
+
+12.-
+Profesion(id, codigo, nombre)
+Profesion_sin_trabajador(id, codigo)
+Trabajador(dni, nombre, apellidos, profesion)
+tener (id_profesion, dni_trabajador)
+Proyecto(id, nombre, f.inicio, f.fin)
+realizar(dni_trabajador, id_proyecto, horas_trabajadas)
+Empresa(cif, nombre, direccion, codigo_interno, telefono)
+realiza(id_proyecto, cif_empresa)
+Fecha(id, fecha)
+asocia(id_fecha, id_proyecto)
+
+13.-
+Empleado(dni, nombre, apellidos, num_seguridad_social, telfono_fijo, telefono_movil)
+Pinche(dni_empleado, fecha_nacimiento)
+estar_a_cargo(dni_empleado.cocinero, dni_empleado.pinche)
+Cocinero(dni_empleado, años_de_servicio)
+Plato(id, nombre,precio,tipo)
+cocina(dni_empleado.cocinero, id_plato)
+Almacén(id, nombre, numero_almacen, descripcion)
+Estante(id, nombre, numero_almacen, descripcion, id_almacen)
+Ingrediente(id, nombre, id_estante)
+contiene(id_plato. id_ingrediente, cantidad)
+
+14.-
+Usuario (dni, contraseña, nombre, apellidos, direccion, foto, esCelebridad)
+bloquea(dni_user, dni_session)
+Email(id_dato, correo_electronicom, id_usuario)
+Telefono(id_dato, num_telefono, id_usuario)
+Contacto (id, comentario_personal)
+Comentarios(id,texto, imagen)
+Grupo(id, nombre)
+organiza(id_grupo, id_usuario)
+forma_parte(id_contacto, id_grupo)
+puede_ver(id_grupo, id_contacto, id_comentario)
+publica(id_usuario, id_comentario)
+
+15.-
+Platos(id, nombre, descripcion, tipo)
+Menu diario (id, fecha_menu, num_personas_tomado, temperatuda_del_dia)
+Platos diarios(id, cantidad_platos_servidos, id_plato)
+consiste(id_menu_diario, id_plato_diario)
+
+16.-
+Usuario(id_user, nombre, correo, foto, seguidores, fecha_registro)
+seguir(id_user_sesion, id_user_other)
+Comentarios(id_comentario, comentario,id_publicacion)
+Publicaciones(id_publicacion, publicacion, likes, retweet, fecha_subida )
+postear(id_usuario, id_publicacion, id_comentarios)
+Hastags(id, texto)
+usar(id_hashtag, id_publicacion)
+
+17.-
+Profesor(dni, direccion, nombre, telefono, correo_electronico, num_seg_social, codigo_interno, años_antiguedad)
+Asignatura(id, nombre, codigo_interno_centro, codigo_europeo, curso_ciclo, entidad, id_profesor, fecha_inicio, fecha_finalizacion)
+requiere(id_asignatura_pedido, id_asignatura_nuevo, nombre)
+Ciclo(id, nombre, tipo, codigo_interno, id_curso)
+importe(id_asignatura, id_ciclo)
+Aula (id, codigo, nombre, numero_aula, metros_quadrados)
+ocupa (id_asignatura, id_aula)
+Curso(id, dia_semana, hora_dia)
+Horario escolar(id, dia_semana, hora_dia, id_curso)
+
+18.-
