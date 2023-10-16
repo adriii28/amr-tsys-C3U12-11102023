@@ -1,6 +1,6 @@
 # Ejercicios E/R
 
-**Puedes acceder a cada modelo relacional en el siguiente enlace:** [Modelo Relacional](https://github.com/adriii28/amr-tsys-C3U12-11102023/blob/dev/Modelo_Relacional.pdg)
+**Puedes acceder a cada modelo relacional en el siguiente enlace:** [Modelo Relacional](https://github.com/adriii28/amr-tsys-C3U12-11102023/blob/dev/Modelo_Relacional.pdf)
 
 **Puedes acceder a las capturas de imagen de cada gràfico:** [Capturas de pantalla](https://github.com/adriii28/amr-tsys-C3U12-11102023/blob/dev/img/diagram)
 
