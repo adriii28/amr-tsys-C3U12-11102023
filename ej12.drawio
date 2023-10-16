@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T16:19:03.518Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="wpcUH2neqV2Gcv4GewKZ" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-16T16:22:36.884Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="ee3Jh2MiwqPuSZwAStaW" version="22.0.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="2188" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -346,8 +346,8 @@
         <mxCell id="ttyPLDUEQKWFyNWzXyTx-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Da1Bgp9zZ5HPBIWO9Z5D-131" value="Profesiones sin trabajador" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-790" y="350" width="180" height="90" as="geometry" />
+        <mxCell id="Da1Bgp9zZ5HPBIWO9Z5D-131" value="Profesiones sin trabajador" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="-750" y="390" width="180" height="90" as="geometry" />
         </mxCell>
         <mxCell id="Da1Bgp9zZ5HPBIWO9Z5D-132" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="Da1Bgp9zZ5HPBIWO9Z5D-131" vertex="1">
           <mxGeometry y="30" width="180" height="30" as="geometry" />
@@ -455,6 +455,16 @@
         </mxCell>
         <mxCell id="ttyPLDUEQKWFyNWzXyTx-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.504;entryY=1.07;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyp0QBHopgJXlFMe3I-l-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.294;entryY=0.011;entryDx=0;entryDy=0;exitX=0.517;exitY=0.933;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="Da1Bgp9zZ5HPBIWO9Z5D-21" target="Da1Bgp9zZ5HPBIWO9Z5D-131">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" y="255" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-700" y="313" />
+              <mxPoint x="-700" y="368" />
+              <mxPoint x="-697" y="368" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
