@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T12:05:36.818Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="M8-mqLklj2RfhGsyq1AB" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-16T15:53:13.926Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="8s8kHIp-HBLQRghWw7N0" version="22.0.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="2172" dy="634" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="2188" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -142,20 +142,6 @@
         </mxCell>
         <mxCell id="2jiFzWGauxY_XOc7GJdC-30" value="fecha_salida" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="685" y="350" width="80" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="qRf_m3_fmnxYI7FiQeoy-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2jiFzWGauxY_XOc7GJdC-31" target="qRf_m3_fmnxYI7FiQeoy-7" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="2jiFzWGauxY_XOc7GJdC-31" value="aeropuerto_&lt;br&gt;salida" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=0" parent="1" vertex="1">
-          <mxGeometry x="540" y="421" width="80" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="qRf_m3_fmnxYI7FiQeoy-24" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" source="2jiFzWGauxY_XOc7GJdC-32" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="680" y="490" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="2jiFzWGauxY_XOc7GJdC-32" value="aeropuerto_&lt;br&gt;llegada" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="750" y="421" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lYEexqLNSPWDxcUZi8AM-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="1" source="lYEexqLNSPWDxcUZi8AM-7" target="2jiFzWGauxY_XOc7GJdC-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
