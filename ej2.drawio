@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-18T10:04:03.424Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="RfEUggU-EQ53ZXhCvK3a" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-18T10:09:13.107Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="FupcduvVsVrzKNQHMu1T" version="22.0.4" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1674" dy="1890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -62,7 +62,7 @@
         <mxCell id="CkctEz7jh0PpBciCOMWh-20" value="trabaja" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="210" y="390" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="CkctEz7jh0PpBciCOMWh-32" value="DNI" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" parent="1" vertex="1">
+        <mxCell id="CkctEz7jh0PpBciCOMWh-32" value="dni" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" parent="1" vertex="1">
           <mxGeometry x="80" y="240" width="70" height="40" as="geometry" />
         </mxCell>
         <mxCell id="CkctEz7jh0PpBciCOMWh-39" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="CkctEz7jh0PpBciCOMWh-33" target="CkctEz7jh0PpBciCOMWh-1" edge="1">
@@ -121,7 +121,7 @@
         <mxCell id="CkctEz7jh0PpBciCOMWh-66" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="CkctEz7jh0PpBciCOMWh-61" target="CkctEz7jh0PpBciCOMWh-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CkctEz7jh0PpBciCOMWh-61" value="DNI" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" parent="1" vertex="1">
+        <mxCell id="CkctEz7jh0PpBciCOMWh-61" value="dni" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" parent="1" vertex="1">
           <mxGeometry x="390" y="30" width="70" height="40" as="geometry" />
         </mxCell>
         <mxCell id="CkctEz7jh0PpBciCOMWh-67" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="CkctEz7jh0PpBciCOMWh-62" edge="1" target="CkctEz7jh0PpBciCOMWh-4">
