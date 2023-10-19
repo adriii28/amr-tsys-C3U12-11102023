@@ -17,9 +17,9 @@ fecha_inicio date not null,
 fecha_final date not null, 
 programa varchar(40) not null,
 titulo varchar(30) not null,
-dni_profesor varchar(8) not null,
+dni_profesor varchar(9) not null,
 FOREIGN KEY (dni_profesor) REFERENCES Profesor(dni) on delete cascade on update cascade,
-CHECK (fecha_inicio < fecha_final)
+CHECK (fecha_inicio <= fecha_final)
 );
 
 
