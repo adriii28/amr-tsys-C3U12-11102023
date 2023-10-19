@@ -37,5 +37,5 @@ CREATE TABLE Prestamo (
   isbn_libro varchar(15) NOT NULL,
   FOREIGN KEY (dni_persona) REFERENCES Persona (dni) on delete cascade on update cascade,
   FOREIGN KEY (isbn_libro) REFERENCES Libro (isbn) on delete cascade on update cascade,
-  CHECK (fecha_tope  <= fecha_inicio )
+  CHECK (fecha_tope >= fecha_inicio )
 );
