@@ -90,98 +90,132 @@ INSERT INTO Usuario (dni, contraseña, nombre, apellidos, direccion, foto, esCel
 ('22222222', 'contraseña2', 'Juan', 'López', 'Calle Falsa 2', 'juan.jpg', 0),
 ('33333333', 'contraseña3', 'María', 'Martínez', 'Avenida Principal 3', 'maria.jpg', 1),
 ('44444444', 'contraseña4', 'Antonio', 'Fernández', 'Calle Grande 4', 'antonio.jpg', 0),
-('55555555', 'contraseña5', 'Sofía', 'Pérez', 'Plaza Mayor 5', 'sofia.jpg', 1);
+('55555555', 'contraseña5', 'Sofía', 'Pérez', 'Plaza Mayor 5', 'sofia.jpg', 1),
+('66666666', 'contraseña6', 'Carlos', 'Ramírez', 'Calle Pequeña 6', 'carlos.jpg', 0),
+('77777777', 'contraseña7', 'Ana', 'Gómez', 'Avenida Secundaria 7', 'ana.jpg', 1),
+('88888888', 'contraseña8', 'Luis', 'Sánchez', 'Calle Estrecha 8', 'luis.jpg', 0),
+('99999999', 'contraseña9', 'Elena', 'Rodríguez', 'Avenida Principal 9', 'elena.jpg', 1),
+('10101010', 'contraseña10', 'David', 'López', 'Calle Central 10', 'david.jpg', 0);
 
 INSERT INTO bloquearUsuario (dni_user, dni_session) VALUES
 ('11111111', '22222222'),
 ('33333333', '44444444'),
 ('22222222', '55555555'),
 ('44444444', '11111111'),
-('55555555', '33333333');
+('55555555', '33333333'),
+('66666666', '77777777'),
+('77777777', '88888888'),
+('88888888', '99999999'),
+('99999999', '10101010'),
+('10101010', '11111111');
 
 INSERT INTO Email (id_dato, correo_electronico, id_usuario) VALUES
 (1, 'pepe@email.com', '11111111'),
 (2, 'juan@email.com', '22222222'),
 (3, 'maria@email.com', '33333333'),
 (4, 'antonio@email.com', '44444444'),
-(5, 'sofia@email.com', '55555555');
+(5, 'sofia@email.com', '55555555'),
+(6, 'carlos@email.com', '66666666'),
+(7, 'ana@email.com', '77777777'),
+(8, 'luis@email.com', '88888888'),
+(9, 'elena@email.com', '99999999'),
+(10, 'david@email.com', '10101010');
 
 INSERT INTO Telefono (id_dato, num_telefono, id_usuario) VALUES
 (1, '111-111-1111', '11111111'),
 (2, '222-222-2222', '22222222'),
 (3, '333-333-3333', '33333333'),
 (4, '444-444-4444', '44444444'),
-(5, '555-555-5555', '55555555');
+(5, '555-555-5555', '55555555'),
+(6, '666-666-6666', '66666666'),
+(7, '777-777-7777', '77777777'),
+(8, '888-888-8888', '88888888'),
+(9, '999-999-9999', '99999999'),
+(10, '101-101-1010', '10101010');
 
 INSERT INTO Contacto (id, comentario_personal) VALUES
 (1, 'Amigo cercano'),
 (2, 'Compañero de trabajo'),
 (3, 'Familiar'),
 (4, 'Conocido'),
-(5, 'Amigo de la infancia');
+(5, 'Amigo de la infancia'),
+(6, 'Vecino'),
+(7, 'Compañero de estudio'),
+(8, 'Amigo virtual'),
+(9, 'Pariente lejano'),
+(10, 'Amigo de confianza');
 
 INSERT INTO Comentarios (id, texto, imagen) VALUES
 (1, 'Comentario 1', 'imagen1.jpg'),
 (2, 'Comentario 2', 'imagen2.jpg'),
 (3, 'Comentario 3', 'imagen3.jpg'),
 (4, 'Comentario 4', 'imagen4.jpg'),
-(5, 'Comentario 5', 'imagen5.jpg');
+(5, 'Comentario 5', 'imagen5.jpg'),
+(6, 'Comentario 6', 'imagen6.jpg'),
+(7, 'Comentario 7', 'imagen7.jpg'),
+(8, 'Comentario 8', 'imagen8.jpg'),
+(9, 'Comentario 9', 'imagen9.jpg'),
+(10, 'Comentario 10', 'imagen10.jpg');
 
 INSERT INTO Grupo (id, nombre) VALUES
 (1, 'Grupo 1'),
 (2, 'Grupo 2'),
 (3, 'Grupo 3'),
 (4, 'Grupo 4'),
-(5, 'Grupo 5');
+(5, 'Grupo 5'),
+(6, 'Grupo 6'),
+(7, 'Grupo 7'),
+(8, 'Grupo 8'),
+(9, 'Grupo 9'),
+(10, 'Grupo 10');
 
 INSERT INTO organizaUsuarioGrupo (id_grupo, id_usuario) VALUES
 (1, '11111111'),
 (1, '22222222'),
 (2, '33333333'),
 (2, '44444444'),
-(3, '55555555');
+(3, '55555555'),
+(3, '66666666'),
+(4, '77777777'),
+(4, '88888888'),
+(5, '99999999'),
+(5, '10101010');
 
 INSERT INTO formaParteContactoGrupo (id_contacto, id_grupo) VALUES
 (1, 2),
 (3, 4),
 (2, 5),
 (4, 1),
-(5, 3);
-
-INSERT INTO bloquearUsuario (dni_user, dni_session) VALUES
-('12345678', '87654321'),
-('11111111', '22222222'),
-('33333333', '44444444'),
-('55555555', '66666666'),
-('77777777', '88888888');
-
-INSERT INTO Grupo (id, nombre) VALUES
-(1, 'Grupo 1'),
-(2, 'Grupo 2'),
-(3, 'Grupo 3'),
-(4, 'Grupo 4'),
-(5, 'Grupo 5');
-
-INSERT INTO organizaUsuarioGrupo (id_grupo, id_usuario) VALUES
-(1, '12345678'),
-(2, '11111111'),
-(3, '33333333'),
-(4, '55555555'),
-(5, '77777777');
+(5, 3),
+(6, 7),
+(8, 9),
+(10, 1),
+(3, 5),
+(2, 4);
 
 INSERT INTO puede_verGrupoContactoComentario (id_grupo, id_contacto, id_comentario) VALUES
 (1, 1, 1),
 (2, 2, 2),
 (3, 3, 3),
 (4, 4, 4),
-(5, 5, 5);
+(5, 5, 5),
+(6, 6, 6),
+(7, 7, 7),
+(8, 8, 8),
+(9, 9, 9),
+(10, 10, 10);
 
 INSERT INTO publicaUsuarioComentario (id_usuario, id_comentario) VALUES
-('12345678', 1),
-('11111111', 2),
+('11111111', 1),
+('22222222', 2),
 ('33333333', 3),
-('55555555', 4),
-('77777777', 5);
+('44444444', 4),
+('55555555', 5),
+('66666666', 6),
+('77777777', 7),
+('88888888', 8),
+('99999999', 9),
+('10101010', 10);
 
 -- -----------------------------------UPDATES------------------------------------------------
 
