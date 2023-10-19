@@ -19,27 +19,23 @@ CREATE TABLE Seguir(
 	FOREIGN KEY (id_user_other) REFERENCES Usuario(id) ON DELETE CASCADE
 );
 
-CREATE TABLE Publicacion(
+CREATE TABLE Tweets(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	publicacion VARCHAR(255),
+	contenido VARCHAR(255),
 	likes INT,
-	retweet INT
+	retweet INT,
+    fechaSubida DATE,
+    id_usuario INT NOT NULL,
+    id_retweet INT,
+    FOREIGN KEY (id_usuario) REFERENCES Usuario(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_retweet) REFERENCES Tweets(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Comentarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	comentario VARCHAR(255),
-	id_publicacion INT,
-	FOREIGN KEY (id_publicacion) REFERENCES Publicacion(id)
-);
-
-CREATE TABLE postear(
-	id_usuario INT NOT NULL,
-	id_publicacion INT NOT NULL,
-	id_comentarios INT,
-    FOREIGN KEY (id_usuario) REFERENCES Usuario(id) ON DELETE CASCADE,
-    FOREIGN KEY (id_publicacion) REFERENCES Publicacion(id) ON DELETE CASCADE,
-    FOREIGN KEY (id_comentarios) REFERENCES Comentarios(id) ON DELETE CASCADE
+	id_tweet INT,
+	FOREIGN KEY (id_tweet) REFERENCES Tweets(id)
 );
 
 CREATE TABLE Hashtags(
@@ -49,9 +45,9 @@ CREATE TABLE Hashtags(
 
 CREATE TABLE usarHashtag(
 	id_hashtag INT,
-	id_publicacion INT,
+	id_tweet INT,
 	FOREIGN KEY (id_hashtag) REFERENCES Hashtags(id),
-    FOREIGN KEY (id_publicacion) REFERENCES Publicacion(id) ON DELETE CASCADE
+    FOREIGN KEY (id_tweet) REFERENCES Tweets(id) ON DELETE CASCADE
 );
 
 
@@ -70,19 +66,31 @@ INSERT INTO Usuario (nombre, correo, foto, seguidores, fecha_registro) VALUES
 ('Duolingo JP', 'Duolingo@gmail.com', 'foto9.jpg', 125, '2023-10-11'),
 ('Duolingo EN', 'Duolingo@gmail.com', 'foto10.jpg', 180, '2023-10-10');
 
-INSERT INTO Publicacion (publicacion, likes, retweet) VALUES
-('Ayer me comí patatas', 50, 3),
-('La tierra es plana', 75, 765),
-('Jose es el mejor', 30, 345),
-('Viva SQL', 110, 235),
-('La tortilla de patatas se hace con cebolla', 90, 2),
-('La Nutella es nocilla pero mala', 120, 867),
-('Sois unos p***s', 40, 5678),
-('Vivan las pizzas', 70, 3333),
-('Unity se está yendo a pique', 55, 8888),
-('Quiero ser programador', 85, 666);
+INSERT INTO Seguir (id_user_sesion,id_user_other) VALUES
+(1,2),
+(2,3),
+(3,2),
+(4,3),
+(5,2),
+(5,3),
+(5,8),
+(5,9),
+(6,2),
+(7,3);
 
-INSERT INTO Comentarios (comentario, id_publicacion) VALUES
+INSERT INTO Tweets (contenido, likes, retweet, fechaSubida, id_usuario, id_retweet) VALUES
+('Ayer me comí patatas', 50, 3, '2023-10-18', 1, 1),
+('La tierra es plana', 75, 765, '2023-10-18', 2, 2),
+('Jose es el mejor', 30, 345, '2023-10-18', 3, NULL),
+('Viva SQL', 110, 235, '2023-10-18', 4, NULL),
+('La tortilla de patatas se hace con cebolla', 90, 2, '2023-10-18', 5, NULL),
+('La Nutella es nocilla pero mala', 120, 867, '2023-10-18', 6, 6),
+('Sois unos p***s', 40, 5678, '2023-10-18', 7, 7),
+('Vivan las pizzas', 70, 3333, '2023-10-18', 8, 8),
+('Unity se está yendo a pique', 55, 8888, '2023-10-18', 9, 9),
+('Quiero ser programador', 85, 666, '2023-10-18', 10, NULL);
+
+INSERT INTO Comentarios (comentario, id_tweet) VALUES
 ('Pero, ¿qué dices?', 1),
 ('No opino lo mismo', 1),
 ('Sí, es el mejor', 3),
@@ -94,17 +102,6 @@ INSERT INTO Comentarios (comentario, id_publicacion) VALUES
 ('QUE DICES', NULL),
 ('De acuerdo', NULL);
 
-INSERT INTO postear (id_usuario, id_publicacion, id_comentarios) VALUES
-(1, 1, NULL),
-(2, 2, NULL),
-(3, 3, NULL),
-(4, 4, 9),
-(5, 5, 10),
-(6, 6, NULL),
-(7, 7, NULL),
-(8, 8, NULL),
-(9, 9, NULL),
-(10, 10, NULL);
 
 INSERT INTO Hashtags (texto) VALUES
 ('Viral'),
@@ -118,7 +115,7 @@ INSERT INTO Hashtags (texto) VALUES
 ('Twitch'),
 ('Kick');
 
-INSERT INTO usarHashtag (id_hashtag, id_publicacion) VALUES
+INSERT INTO usarHashtag (id_hashtag, id_tweet) VALUES
 (1, 1),
 (2, 2),
 (3, 3),
@@ -142,9 +139,9 @@ UPDATE Usuario SET correo = 'correo_nuevo7@gmail.com' WHERE id = 8;
 UPDATE Usuario SET fecha_registro = '2023-10-02' WHERE id = 9;
 UPDATE Usuario SET foto = 'foto_actualizada9.jpg' WHERE id = 10;
 
-UPDATE Seguir SET id_user_sesion = 5 WHERE id_user_sesion = 1;
+UPDATE Seguir SET id_user_sesion = 5 WHERE id_user_sesion = 10;
 UPDATE Seguir SET id_user_sesion = 10 WHERE id_user_sesion = 2;
-UPDATE Seguir SET id_user_sesion = 6 WHERE id_user_sesion = 3;
+UPDATE Seguir SET id_user_sesion = 6 WHERE id_user_sesion = 4;
 UPDATE Seguir SET id_user_other = 1 WHERE id_user_other = 4;
 UPDATE Seguir SET id_user_other = 9 WHERE id_user_other = 5;
 UPDATE Seguir SET id_user_other = 8 WHERE id_user_other = 6;
@@ -153,16 +150,17 @@ UPDATE Seguir SET id_user_sesion = 2, id_user_other = 6 WHERE id_user_sesion = 9
 UPDATE Seguir SET id_user_sesion = 8, id_user_other = 1 WHERE id_user_sesion = 10;
 UPDATE Seguir SET id_user_sesion = 9, id_user_other = 4 WHERE id_user_sesion = 2;
 
-UPDATE Publicacion SET publicacion = 'Actualización de publicación 1' WHERE id = 1;
-UPDATE Publicacion SET likes = 100 WHERE id = 2;
-UPDATE Publicacion SET retweet = 500 WHERE id = 3;
-UPDATE Publicacion SET publicacion = 'Publicación modificada 4' WHERE id = 4;
-UPDATE Publicacion SET likes = 200 WHERE id = 5;
-UPDATE Publicacion SET retweet = 1000 WHERE id = 6;
-UPDATE Publicacion SET likes = 300 WHERE id = 7;
-UPDATE Publicacion SET retweet = 1500 WHERE id = 8;
-UPDATE Publicacion SET likes = 400 WHERE id = 9;
-UPDATE Publicacion SET retweet = 2000 WHERE id = 10;
+UPDATE Tweets SET contenido = 'Nuevo contenido 1', likes = 60, retweet = 5, fechaSubida = '2023-10-20' WHERE id = 1;
+UPDATE Tweets SET contenido = 'Tweet modificado 2', likes = 80, retweet = 800, fechaSubida = '2023-10-19' WHERE id = 2;
+UPDATE Tweets SET contenido = 'Actualización de tweet 3', likes = 35, retweet = 400, fechaSubida = '2023-10-18' WHERE id = 3;
+UPDATE Tweets SET contenido = 'Otra publicación 4', likes = 125, retweet = 1300, fechaSubida = '2023-10-17' WHERE id = 4;
+UPDATE Tweets SET contenido = 'Tweet editado 5', likes = 95, retweet = 950, fechaSubida = '2023-10-16' WHERE id = 5;
+UPDATE Tweets SET contenido = 'Contenido nuevo 6', likes = 130, retweet = 1500, fechaSubida = '2023-10-15' WHERE id = 6;
+UPDATE Tweets SET contenido = 'Tweet actualizado 7', likes = 45, retweet = 450, fechaSubida = '2023-10-14' WHERE id = 7;
+UPDATE Tweets SET contenido = 'Modificación de tweet 8', likes = 75, retweet = 750, fechaSubida = '2023-10-13' WHERE id = 8;
+UPDATE Tweets SET contenido = 'Tweet revisado 9', likes = 60, retweet = 600, fechaSubida = '2023-10-12' WHERE id = 9;
+UPDATE Tweets SET contenido = 'Tweet mejorado 10', likes = 90, retweet = 900, fechaSubida = '2023-10-11' WHERE id = 10;
+
 
 UPDATE Comentarios SET comentario = 'Nuevo comentario 1' WHERE id = 1;
 UPDATE Comentarios SET comentario = 'Comentario actualizado 2' WHERE id = 2;
@@ -174,17 +172,6 @@ UPDATE Comentarios SET comentario = 'Nuevo comentario 7' WHERE id = 7;
 UPDATE Comentarios SET comentario = 'Comentario actualizado 8' WHERE id = 8;
 UPDATE Comentarios SET comentario = 'Comentario modificado 9' WHERE id = 9;
 UPDATE Comentarios SET comentario = 'Nuevo comentario 10' WHERE id = 10;
-
-UPDATE postear SET id_comentarios = 2 WHERE id_usuario = 1 AND id_publicacion = 1;
-UPDATE postear SET id_comentarios = 3 WHERE id_usuario = 2 AND id_publicacion = 2;
-UPDATE postear SET id_comentarios = 4 WHERE id_usuario = 3 AND id_publicacion = 3;
-UPDATE postear SET id_comentarios = 5 WHERE id_usuario = 4 AND id_publicacion = 4;
-UPDATE postear SET id_comentarios = 6 WHERE id_usuario = 5 AND id_publicacion = 5;
-UPDATE postear SET id_comentarios = 7 WHERE id_usuario = 6 AND id_publicacion = 6;
-UPDATE postear SET id_comentarios = 8 WHERE id_usuario = 7 AND id_publicacion = 7;
-UPDATE postear SET id_comentarios = 9 WHERE id_usuario = 8 AND id_publicacion = 8;
-UPDATE postear SET id_comentarios = 10 WHERE id_usuario = 9 AND id_publicacion = 9;
-UPDATE postear SET id_comentarios = 1 WHERE id_usuario = 10 AND id_publicacion = 10;
 
 UPDATE Hashtags SET texto = 'NuevoHashtag1' WHERE id = 1;
 UPDATE Hashtags SET texto = 'NuevoHashtag2' WHERE id = 2;
@@ -231,16 +218,16 @@ DELETE FROM Seguir WHERE id_user_sesion = 18;
 DELETE FROM Seguir WHERE id_user_sesion = 19;
 DELETE FROM Seguir WHERE id_user_sesion = 20;
 
-DELETE FROM Publicacion WHERE id = 11;
-DELETE FROM Publicacion WHERE id = 12;
-DELETE FROM Publicacion WHERE id = 13;
-DELETE FROM Publicacion WHERE id = 14;
-DELETE FROM Publicacion WHERE id = 15;
-DELETE FROM Publicacion WHERE id = 16;
-DELETE FROM Publicacion WHERE id = 17;
-DELETE FROM Publicacion WHERE id = 18;
-DELETE FROM Publicacion WHERE id = 19;
-DELETE FROM Publicacion WHERE id = 20;
+DELETE FROM Tweets WHERE id = 11;
+DELETE FROM Tweets WHERE id = 12;
+DELETE FROM Tweets WHERE id = 13;
+DELETE FROM Tweets WHERE id = 14;
+DELETE FROM Tweets WHERE id = 15;
+DELETE FROM Tweets WHERE id = 16;
+DELETE FROM Tweets WHERE id = 17;
+DELETE FROM Tweets WHERE id = 18;
+DELETE FROM Tweets WHERE id = 19;
+DELETE FROM Tweets WHERE id = 20;
 
 DELETE FROM Comentarios WHERE id = 11;
 DELETE FROM Comentarios WHERE id = 12;
@@ -252,17 +239,6 @@ DELETE FROM Comentarios WHERE id = 17;
 DELETE FROM Comentarios WHERE id = 18;
 DELETE FROM Comentarios WHERE id = 19;
 DELETE FROM Comentarios WHERE id = 20;
-
-DELETE FROM postear WHERE id_usuario = 11;
-DELETE FROM postear WHERE id_usuario = 12;
-DELETE FROM postear WHERE id_usuario = 13;
-DELETE FROM postear WHERE id_usuario = 14;
-DELETE FROM postear WHERE id_usuario = 15;
-DELETE FROM postear WHERE id_usuario = 16;
-DELETE FROM postear WHERE id_usuario = 17;
-DELETE FROM postear WHERE id_usuario = 18;
-DELETE FROM postear WHERE id_usuario = 19;
-DELETE FROM postear WHERE id_usuario = 20;
 
 DELETE FROM Hashtags WHERE id = 11;
 DELETE FROM Hashtags WHERE id = 12;
