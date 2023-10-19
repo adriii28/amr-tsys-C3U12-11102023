@@ -10,7 +10,6 @@ CREATE TABLE Usuario (
     foto VARCHAR(255),
     esCelebridad BIT
 );
-
 CREATE TABLE bloquearUsuario (
     dni_user VARCHAR(8),
     dni_session VARCHAR(8),
@@ -246,8 +245,8 @@ UPDATE Telefono SET num_telefono = '777-777-7777' WHERE id_dato = 2;
 UPDATE Telefono SET num_telefono = 'nuevo_telefono1' WHERE id_dato = 3;
 UPDATE Telefono SET num_telefono = 'nuevo_telefono2' WHERE id_dato = 4;
 UPDATE Telefono SET num_telefono = '123-456-7890' WHERE id_dato = 5;
-UPDATE Telefono SET num_telefono = 'telefono_actualizado1' WHERE id_dato = 6;
-UPDATE Telefono SET num_telefono = 'telefono_actualizado2' WHERE id_dato = 7;
+UPDATE Telefono SET num_telefono = '234543553' WHERE id_dato = 6;
+UPDATE Telefono SET num_telefono = '33333444443' WHERE id_dato = 7;
 UPDATE Telefono SET num_telefono = '987-654-3210' WHERE id_dato = 8;
 UPDATE Telefono SET num_telefono = '555-555-5555' WHERE id_dato = 9;
 UPDATE Telefono SET num_telefono = '444-444-4444' WHERE id_dato = 10;
@@ -309,6 +308,18 @@ UPDATE publicaUsuarioComentario SET id_usuario = '44444444' WHERE id_comentario 
 
 
 -- -----------------------------------DELETES------------------------------------------------
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '11111111';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '22222222';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '33333333';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '44444444';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '55555555';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '66666666';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '77777777';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '88888888';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '99999999';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '10101010';
+
+
 DELETE FROM Usuario WHERE dni = '11111111';
 DELETE FROM Usuario WHERE dni = '22222222';
 DELETE FROM Usuario WHERE dni = '33333333';
@@ -352,6 +363,28 @@ DELETE FROM Telefono WHERE id_dato = 7;
 DELETE FROM Telefono WHERE id_dato = 8;
 DELETE FROM Telefono WHERE id_dato = 9;
 DELETE FROM Telefono WHERE id_dato = 10;
+
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 1;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 2;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 3;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 4;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 5;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 6;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 7;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 8;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 9;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 10;
+
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 1;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 2;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 3;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 4;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 5;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 6;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 7;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 8;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 9;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 10;
 
 DELETE FROM Contacto WHERE id = 1;
 DELETE FROM Contacto WHERE id = 2;
@@ -397,35 +430,3 @@ DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 8;
 DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 9;
 DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 10;
 
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 1;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 2;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 3;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 4;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 5;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 6;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 7;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 8;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 9;
-DELETE FROM formaParteContactoGrupo WHERE id_contacto = 10;
-
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 1;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 2;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 3;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 4;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 5;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 6;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 7;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 8;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 9;
-DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 10;
-
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '11111111';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '22222222';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '33333333';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '44444444';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '55555555';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '66666666';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '77777777';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '88888888';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '99999999';
-DELETE FROM publicaUsuarioComentario WHERE id_usuario = '10101010';
