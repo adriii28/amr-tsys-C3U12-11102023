@@ -270,99 +270,286 @@ INSERT INTO AsociarGarajePiso (codigo_inmueble_garaje, codigo_inmueble_piso) VAL
 UPDATE Persona SET telefono_fijo = '111-111-1111' WHERE id = 1;
 UPDATE Persona SET movil = '999-999-9999' WHERE id = 2;
 UPDATE Persona SET nombre = 'Javier' WHERE id = 3;
+UPDATE Persona SET telefono_fijo = '111-222-3333' WHERE id = 4;
+UPDATE Persona SET movil = '999-888-7777' WHERE id = 5;
+UPDATE Persona SET nombre = 'Lucía' WHERE id = 6;
+UPDATE Persona SET telefono_fijo = '111-444-5555' WHERE id = 7;
+UPDATE Persona SET movil = '999-666-2222' WHERE id = 8;
+UPDATE Persona SET nombre = 'Roberto' WHERE id = 9;
+UPDATE Persona SET telefono_fijo = '111-777-7777' WHERE id = 10;
 
 UPDATE Cliente SET id_persona = 6 WHERE codigo_personal = 101;
 UPDATE Cliente SET id_persona = 7 WHERE codigo_personal = 102;
 UPDATE Cliente SET id_persona = 8 WHERE codigo_personal = 103;
+UPDATE Cliente SET id_persona = 9 WHERE codigo_personal = 104;
+UPDATE Cliente SET id_persona = 10 WHERE codigo_personal = 105;
+UPDATE Cliente SET id_persona = 1 WHERE codigo_personal = 106;
+UPDATE Cliente SET id_persona = 2 WHERE codigo_personal = 107;
+UPDATE Cliente SET id_persona = 3 WHERE codigo_personal = 108;
+UPDATE Cliente SET id_persona = 4 WHERE codigo_personal = 109;
+UPDATE Cliente SET id_persona = 5 WHERE codigo_personal = 110;
 
-UPDATE Trabajador SET id_persona = 9 WHERE codigo_personal = 201;
-UPDATE Trabajador SET id_persona = 10 WHERE codigo_personal = 202;
-UPDATE Trabajador SET id_persona = 1 WHERE codigo_personal = 203;
+UPDATE Trabajador SET id_persona = 1 WHERE codigo_personal = 201;
+UPDATE Trabajador SET id_persona = 2 WHERE codigo_personal = 202;
+UPDATE Trabajador SET id_persona = 3 WHERE codigo_personal = 203;
+UPDATE Trabajador SET id_persona = 4 WHERE codigo_personal = 204;
+UPDATE Trabajador SET id_persona = 5 WHERE codigo_personal = 205;
+UPDATE Trabajador SET id_persona = 6 WHERE codigo_personal = 206;
+UPDATE Trabajador SET id_persona = 7 WHERE codigo_personal = 207;
+UPDATE Trabajador SET id_persona = 8 WHERE codigo_personal = 208;
+UPDATE Trabajador SET id_persona = 9 WHERE codigo_personal = 209;
+UPDATE Trabajador SET id_persona = 10 WHERE codigo_personal = 210;
 
 UPDATE Compra SET fecha = '2023-09-15' WHERE codigo_compra = 1001;
 UPDATE Compra SET valor = 180000.00 WHERE codigo_compra = 1002;
 UPDATE Compra SET fecha = '2023-09-20' WHERE codigo_compra = 1003;
+UPDATE Compra SET fecha = '2023-09-25' WHERE codigo_compra = 1004;
+UPDATE Compra SET valor = 190000.00 WHERE codigo_compra = 1005;
+UPDATE Compra SET fecha = '2023-09-30' WHERE codigo_compra = 1006;
+UPDATE Compra SET fecha = '2023-10-05' WHERE codigo_compra = 1007;
+UPDATE Compra SET valor = 200000.00 WHERE codigo_compra = 1008;
+UPDATE Compra SET fecha = '2023-10-10' WHERE codigo_compra = 1009;
+UPDATE Compra SET valor = 210000.00 WHERE codigo_compra = 1010;
 
 UPDATE Alquiler SET nombre_agente_empresa = 'Nueva Inmobiliaria' WHERE id = 1;
 UPDATE Alquiler SET persona_alquilando = 10 WHERE id = 2;
 UPDATE Alquiler SET nombre_agente_empresa = 'Agente Actualizado' WHERE id = 3;
+UPDATE Alquiler SET nombre_agente_empresa = 'Inmobiliaria 456' WHERE id = 4;
+UPDATE Alquiler SET persona_alquilando = 9 WHERE id = 5;
+UPDATE Alquiler SET nombre_agente_empresa = 'Agente 789' WHERE id = 6;
+UPDATE Alquiler SET nombre_agente_empresa = 'Inmobiliaria XYZ' WHERE id = 7;
+UPDATE Alquiler SET persona_alquilando = 8 WHERE id = 8;
+UPDATE Alquiler SET nombre_agente_empresa = 'Agente ABC' WHERE id = 9;
+UPDATE Alquiler SET persona_alquilando = 7 WHERE id = 10;
 
 UPDATE Alquilar SET id_persona = 4 WHERE id_alquiler = 1;
 UPDATE Alquilar SET id_persona = 3 WHERE id_alquiler = 2;
 UPDATE Alquilar SET id_persona = 2 WHERE id_alquiler = 3;
+UPDATE Alquilar SET id_persona = 1 WHERE id_alquiler = 4;
+UPDATE Alquilar SET id_persona = 10 WHERE id_alquiler = 5;
+UPDATE Alquilar SET id_persona = 9 WHERE id_alquiler = 6;
+UPDATE Alquilar SET id_persona = 8 WHERE id_alquiler = 7;
+UPDATE Alquilar SET id_persona = 7 WHERE id_alquiler = 8;
+UPDATE Alquilar SET id_persona = 6 WHERE id_alquiler = 9;
+UPDATE Alquilar SET id_persona = 5 WHERE id_alquiler = 10;
 
 UPDATE Comprar SET codigo_inmueble = 8 WHERE codigo_compra = 1011;
 UPDATE Comprar SET id_persona = 5 WHERE codigo_compra = 1012;
 UPDATE Comprar SET codigo_inmueble = 7 WHERE codigo_compra = 1013;
+UPDATE Comprar SET codigo_inmueble = 9 WHERE codigo_compra = 1014;
+UPDATE Comprar SET id_persona = 6 WHERE codigo_compra = 1015;
+UPDATE Comprar SET codigo_inmueble = 10 WHERE codigo_compra = 1016;
+UPDATE Comprar SET codigo_inmueble = 1 WHERE codigo_compra = 1017;
+UPDATE Comprar SET id_persona = 7 WHERE codigo_compra = 1018;
+UPDATE Comprar SET codigo_inmueble = 2 WHERE codigo_compra = 1019;
+UPDATE Comprar SET id_persona = 8 WHERE codigo_compra = 1020;
 
 UPDATE PagosAlquiler SET valor = 1400.00 WHERE id = 11;
 UPDATE PagosAlquiler SET mes = 10 WHERE id = 12;
 UPDATE PagosAlquiler SET año = 2024 WHERE id = 13;
+UPDATE PagosAlquiler SET valor = 1500.00 WHERE id = 14;
+UPDATE PagosAlquiler SET mes = 11 WHERE id = 15;
+UPDATE PagosAlquiler SET año = 2025 WHERE id = 16;
+UPDATE PagosAlquiler SET valor = 1600.00 WHERE id = 17;
+UPDATE PagosAlquiler SET mes = 12 WHERE id = 18;
+UPDATE PagosAlquiler SET año = 2026 WHERE id = 19;
+UPDATE PagosAlquiler SET valor = 1700.00 WHERE id = 20;
 
 UPDATE Inmueble SET direccion = 'Calle Nueva 456' WHERE codigo_inmueble = 1;
 UPDATE Inmueble SET metros_cuadrados = 170.00 WHERE codigo_inmueble = 2;
 UPDATE Inmueble SET direccion = 'Avenida Principal 789' WHERE codigo_inmueble = 3;
+UPDATE Inmueble SET direccion = 'Carretera 123' WHERE codigo_inmueble = 4;
+UPDATE Inmueble SET metros_cuadrados = 180.00 WHERE codigo_inmueble = 5;
+UPDATE Inmueble SET direccion = 'Plaza ABC' WHERE codigo_inmueble = 6;
+UPDATE Inmueble SET direccion = 'Avenida 456' WHERE codigo_inmueble = 7;
+UPDATE Inmueble SET metros_cuadrados = 190.00 WHERE codigo_inmueble = 8;
+UPDATE Inmueble SET direccion = 'Carretera XYZ' WHERE codigo_inmueble = 9;
+UPDATE Inmueble SET metros_cuadrados = 200.00 WHERE codigo_inmueble = 10;
 
 UPDATE Garajes SET planta = 2 WHERE codigo_inmueble = 1;
 UPDATE Garajes SET numero_garaje = 3 WHERE codigo_inmueble = 2;
 UPDATE Garajes SET planta = 3 WHERE codigo_inmueble = 3;
+UPDATE Garajes SET planta = 1 WHERE codigo_inmueble = 4;
+UPDATE Garajes SET numero_garaje = 2 WHERE codigo_inmueble = 5;
+UPDATE Garajes SET planta = 2 WHERE codigo_inmueble = 6;
+UPDATE Garajes SET numero_garaje = 1 WHERE codigo_inmueble = 7;
+UPDATE Garajes SET planta = 3 WHERE codigo_inmueble = 8;
+UPDATE Garajes SET numero_garaje = 3 WHERE codigo_inmueble = 9;
+UPDATE Garajes SET planta = 1 WHERE codigo_inmueble = 10;
 
 UPDATE Pisos SET codigo_especial = 'Especial 201' WHERE codigo_inmueble = 6;
 UPDATE Pisos SET codigo_especial = 'Especial 202' WHERE codigo_inmueble = 7;
 UPDATE Pisos SET codigo_especial = 'Especial 203' WHERE codigo_inmueble = 8;
+UPDATE Pisos SET codigo_especial = 'Especial 204' WHERE codigo_inmueble = 9;
+UPDATE Pisos SET codigo_especial = 'Especial 205' WHERE codigo_inmueble = 10;
+UPDATE Pisos SET codigo_especial = 'Especial 206' WHERE codigo_inmueble = 1;
+UPDATE Pisos SET codigo_especial = 'Especial 207' WHERE codigo_inmueble = 2;
+UPDATE Pisos SET codigo_especial = 'Especial 208' WHERE codigo_inmueble = 3;
+UPDATE Pisos SET codigo_especial = 'Especial 209' WHERE codigo_inmueble = 4;
+UPDATE Pisos SET codigo_especial = 'Especial 210' WHERE codigo_inmueble = 5;
 
 UPDATE Locales SET servicio = 'Aire acondicionado y calefacción' WHERE codigo_inmueble = 1;
 UPDATE Locales SET uso = 'Comercial y Oficina' WHERE codigo_inmueble = 2;
 UPDATE Locales SET servicio = 'Internet de alta velocidad' WHERE codigo_inmueble = 3;
+UPDATE Locales SET servicio = 'Cocina equipada' WHERE codigo_inmueble = 4;
+UPDATE Locales SET uso = 'Oficina' WHERE codigo_inmueble = 5;
+UPDATE Locales SET servicio = 'Baño privado' WHERE codigo_inmueble = 6;
+UPDATE Locales SET servicio = 'Alarma de seguridad' WHERE codigo_inmueble = 7;
+UPDATE Locales SET uso = 'Comercial' WHERE codigo_inmueble = 8;
+UPDATE Locales SET servicio = 'Aparcamiento' WHERE codigo_inmueble = 9;
+UPDATE Locales SET uso = 'Oficina' WHERE codigo_inmueble = 10;
 
 UPDATE OtroTipo SET servicio = 'Transporte público cercano' WHERE codigo_inmueble = 6;
 UPDATE OtroTipo SET uso = 'Residencial y Comercial' WHERE codigo_inmueble = 7;
 UPDATE OtroTipo SET servicio = 'Vigilancia 24/7' WHERE codigo_inmueble = 8;
+UPDATE OtroTipo SET servicio = 'Zonas verdes' WHERE codigo_inmueble = 9;
+UPDATE OtroTipo SET uso = 'Industrial' WHERE codigo_inmueble = 10;
+UPDATE OtroTipo SET servicio = 'Almacenamiento en frío' WHERE codigo_inmueble = 1;
+UPDATE OtroTipo SET servicio = 'Maquinaria incluida' WHERE codigo_inmueble = 2;
+UPDATE OtroTipo SET uso = 'Residencial' WHERE codigo_inmueble = 3;
+UPDATE OtroTipo SET servicio = 'Gimnasio' WHERE codigo_inmueble = 4;
+UPDATE OtroTipo SET uso = 'Industrial' WHERE codigo_inmueble = 5;
 
 UPDATE AsociarGarajePiso SET codigo_inmueble_piso = 6 WHERE codigo_inmueble_garaje = 1;
 UPDATE AsociarGarajePiso SET codigo_inmueble_garaje = 9 WHERE codigo_inmueble_piso = 10;
 UPDATE AsociarGarajePiso SET codigo_inmueble_piso = 2 WHERE codigo_inmueble_garaje = 3;
-
+UPDATE AsociarGarajePiso SET codigo_inmueble_piso = 4 WHERE codigo_inmueble_garaje = 5;
+UPDATE AsociarGarajePiso SET codigo_inmueble_garaje = 7 WHERE codigo_inmueble_piso = 8;
+UPDATE AsociarGarajePiso SET codigo_inmueble_piso = 1 WHERE codigo_inmueble_garaje = 6;
+UPDATE AsociarGarajePiso SET codigo_inmueble_piso = 3 WHERE codigo_inmueble_garaje = 7;
+UPDATE AsociarGarajePiso SET codigo_inmueble_piso = 5 WHERE codigo_inmueble_garaje = 8;
+UPDATE AsociarGarajePiso SET codigo_inmueble_piso = 10 WHERE codigo_inmueble_garaje = 9;
+UPDATE AsociarGarajePiso SET codigo_inmueble_piso = 9 WHERE codigo_inmueble_garaje = 10;
 
 -- -----------------------------------DELETES------------------------------------------------
 DELETE FROM Persona WHERE id = 4;
 DELETE FROM Persona WHERE id = 5;
+DELETE FROM Persona WHERE id = 6;
+DELETE FROM Persona WHERE id = 7;
+DELETE FROM Persona WHERE id = 8;
+DELETE FROM Persona WHERE id = 9;
+DELETE FROM Persona WHERE id = 10;
+DELETE FROM Persona WHERE id = 11;
+DELETE FROM Persona WHERE id = 12;
+DELETE FROM Persona WHERE id = 13;
 
 DELETE FROM Cliente WHERE codigo_personal = 104;
 DELETE FROM Cliente WHERE codigo_personal = 105;
+DELETE FROM Cliente WHERE codigo_personal = 106;
+DELETE FROM Cliente WHERE codigo_personal = 107;
+DELETE FROM Cliente WHERE codigo_personal = 108;
+DELETE FROM Cliente WHERE codigo_personal = 109;
+DELETE FROM Cliente WHERE codigo_personal = 110;
+DELETE FROM Cliente WHERE codigo_personal = 111;
+DELETE FROM Cliente WHERE codigo_personal = 112;
+DELETE FROM Cliente WHERE codigo_personal = 113;
 
 DELETE FROM Trabajador WHERE codigo_personal = 204;
 DELETE FROM Trabajador WHERE codigo_personal = 205;
+DELETE FROM Trabajador WHERE codigo_personal = 206;
+DELETE FROM Trabajador WHERE codigo_personal = 207;
+DELETE FROM Trabajador WHERE codigo_personal = 208;
+DELETE FROM Trabajador WHERE codigo_personal = 209;
+DELETE FROM Trabajador WHERE codigo_personal = 210;
+DELETE FROM Trabajador WHERE codigo_personal = 211;
+DELETE FROM Trabajador WHERE codigo_personal = 212;
+DELETE FROM Trabajador WHERE codigo_personal = 213;
 
 DELETE FROM Compra WHERE codigo_compra = 1004;
 DELETE FROM Compra WHERE codigo_compra = 1005;
+DELETE FROM Compra WHERE codigo_compra = 1006;
+DELETE FROM Compra WHERE codigo_compra = 1007;
+DELETE FROM Compra WHERE codigo_compra = 1008;
+DELETE FROM Compra WHERE codigo_compra = 1009;
+DELETE FROM Compra WHERE codigo_compra = 1010;
+DELETE FROM Compra WHERE codigo_compra = 1011;
+DELETE FROM Compra WHERE codigo_compra = 1012;
+DELETE FROM Compra WHERE codigo_compra = 1013;
 
 DELETE FROM Alquiler WHERE id = 4;
 DELETE FROM Alquiler WHERE id = 5;
+DELETE FROM Alquiler WHERE id = 6;
+DELETE FROM Alquiler WHERE id = 7;
+DELETE FROM Alquiler WHERE id = 8;
+DELETE FROM Alquiler WHERE id = 9;
+DELETE FROM Alquiler WHERE id = 10;
+DELETE FROM Alquiler WHERE id = 11;
+DELETE FROM Alquiler WHERE id = 12;
+DELETE FROM Alquiler WHERE id = 13;
 
 DELETE FROM Alquilar WHERE id_alquiler = 4;
 DELETE FROM Alquilar WHERE id_alquiler = 5;
+DELETE FROM Alquilar WHERE id_alquiler = 6;
+DELETE FROM Alquilar WHERE id_alquiler = 7;
+DELETE FROM Alquilar WHERE id_alquiler = 8;
+DELETE FROM Alquilar WHERE id_alquiler = 9;
+DELETE FROM Alquilar WHERE id_alquiler = 10;
+DELETE FROM Alquilar WHERE id_alquiler = 11;
+DELETE FROM Alquilar WHERE id_alquiler = 12;
+DELETE FROM Alquilar WHERE id_alquiler = 13;
 
 DELETE FROM Comprar WHERE codigo_compra = 1014;
 DELETE FROM Comprar WHERE codigo_compra = 1015;
+DELETE FROM Comprar WHERE codigo_compra = 1016;
+DELETE FROM Comprar WHERE codigo_compra = 1017;
+DELETE FROM Comprar WHERE codigo_compra = 1018;
+DELETE FROM Comprar WHERE codigo_compra = 1019;
+DELETE FROM Comprar WHERE codigo_compra = 1020;
+DELETE FROM Comprar WHERE codigo_compra = 1021;
+DELETE FROM Comprar WHERE codigo_compra = 1022;
+DELETE FROM Comprar WHERE codigo_compra = 1023;
 
 DELETE FROM PagosAlquiler WHERE id = 14;
 DELETE FROM PagosAlquiler WHERE id = 15;
+DELETE FROM PagosAlquiler WHERE id = 16;
+DELETE FROM PagosAlquiler WHERE id = 17;
+DELETE FROM PagosAlquiler WHERE id = 18;
+DELETE FROM PagosAlquiler WHERE id = 19;
+DELETE FROM PagosAlquiler WHERE id = 20;
+DELETE FROM PagosAlquiler WHERE id = 21;
+DELETE FROM PagosAlquiler WHERE id = 22;
+DELETE FROM PagosAlquiler WHERE id = 23;
 
 DELETE FROM Inmueble WHERE codigo_inmueble = 4;
 DELETE FROM Inmueble WHERE codigo_inmueble = 5;
+DELETE FROM Inmueble WHERE codigo_inmueble = 6;
+DELETE FROM Inmueble WHERE codigo_inmueble = 7;
+DELETE FROM Inmueble WHERE codigo_inmueble = 8;
+DELETE FROM Inmueble WHERE codigo_inmueble = 9;
+DELETE FROM Inmueble WHERE codigo_inmueble = 10;
+DELETE FROM Inmueble WHERE codigo_inmueble = 11;
+DELETE FROM Inmueble WHERE codigo_inmueble = 12;
+DELETE FROM Inmueble WHERE codigo_inmueble = 13;
 
 DELETE FROM Garajes WHERE codigo_inmueble = 4;
 DELETE FROM Garajes WHERE codigo_inmueble = 5;
+DELETE FROM Garajes WHERE codigo_inmueble = 6;
+DELETE FROM Garajes WHERE codigo_inmueble = 7;
+DELETE FROM Garajes WHERE codigo_inmueble = 8;
+DELETE FROM Garajes WHERE codigo_inmueble = 9;
+DELETE FROM Garajes WHERE codigo_inmueble = 10;
+DELETE FROM Garajes WHERE codigo_inmueble = 11;
+DELETE FROM Garajes WHERE codigo_inmueble = 12;
+DELETE FROM Garajes WHERE codigo_inmueble = 13;
 
 DELETE FROM Pisos WHERE codigo_inmueble = 9;
 DELETE FROM Pisos WHERE codigo_inmueble = 10;
+DELETE FROM Pisos WHERE codigo_inmueble = 11;
+DELETE FROM Pisos WHERE codigo_inmueble = 12;
+DELETE FROM Pisos WHERE codigo_inmueble = 13;
+DELETE FROM Pisos WHERE codigo_inmueble = 14;
+DELETE FROM Pisos WHERE codigo_inmueble = 15;
+DELETE FROM Pisos WHERE codigo_inmueble = 16;
+DELETE FROM Pisos WHERE codigo_inmueble = 17;
+DELETE FROM Pisos WHERE codigo_inmueble = 18;
 
-DELETE FROM Locales WHERE codigo_inmueble = 4;
-DELETE FROM Locales WHERE codigo_inmueble = 5;
-
-DELETE FROM OtroTipo WHERE codigo_inmueble = 9;
-DELETE FROM OtroTipo WHERE codigo_inmueble = 10;
-
-DELETE FROM AsociarGarajePiso WHERE codigo_inmueble_garaje = 4;
-DELETE FROM AsociarGarajePiso WHERE codigo_inmueble_piso = 5;
+DELETE FROM Locales WHERE codigo_inmueble = 9;
+DELETE FROM Locales WHERE codigo_inmueble = 10;
+DELETE FROM Locales WHERE codigo_inmueble = 11;
+DELETE FROM Locales WHERE codigo_inmueble = 12;
+DELETE FROM Locales WHERE codigo_inmueble = 13;
+DELETE FROM Locales WHERE codigo_inmueble = 14;
+DELETE FROM Locales WHERE codigo_inmueble = 15;
+DELETE FROM Locales WHERE codigo_inmueble = 16;
+DELETE FROM Locales WHERE codigo_inmueble = 17;
+DELETE FROM Locales WHERE codigo_inmueble = 18;
