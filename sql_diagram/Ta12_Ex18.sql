@@ -28,6 +28,11 @@ CREATE TABLE Compra (
     valor DECIMAL(10, 2) NOT NULL
 );
 
+CREATE TABLE Inmueble (
+    codigo_inmueble INT PRIMARY KEY,
+    direccion VARCHAR(255) NOT NULL,
+    metros_cuadrados DECIMAL(10, 2) NOT NULL
+);
 CREATE TABLE Alquiler (
     id INT PRIMARY KEY,
     codigo_inmueble INT NOT NULL,
@@ -60,11 +65,7 @@ CREATE TABLE PagosAlquiler (
     FOREIGN KEY (id_alquiler) REFERENCES Alquiler(id) ON DELETE CASCADE
 );
 
-CREATE TABLE Inmueble (
-    codigo_inmueble INT PRIMARY KEY,
-    direccion NVARCHAR(255) NOT NULL,
-    metros_cuadrados DECIMAL(10, 2) NOT NULL
-);
+
 
 CREATE TABLE Garajes (
     codigo_inmueble INT PRIMARY KEY,
@@ -145,6 +146,18 @@ INSERT INTO Compra (codigo_compra, fecha, valor) VALUES
 (1009, '2023-09-09', 260000.00),
 (1010, '2023-09-10', 270000.00);
 
+INSERT INTO Inmueble (codigo_inmueble, direccion, metros_cuadrados) VALUES
+(1, 'Calle 123', 120.50),
+(2, 'Avenida XYZ', 150.25),
+(3, 'Plaza 789', 110.75),
+(4, 'Carretera 456', 130.00),
+(5, 'Calle ABC', 160.75),
+(6, 'Avenida 567', 140.25),
+(7, 'Plaza 234', 100.00),
+(8, 'Carretera 890', 170.50),
+(9, 'Calle 678', 180.25),
+(10, 'Avenida 012', 190.00);
+
 INSERT INTO Alquiler (id, codigo_inmueble, persona_alquilando, nombre_agente_empresa) VALUES
 (1, 1, 2, 'Inmobiliaria XYZ'),
 (2, 2, 1, 'Agente ABC'),
@@ -193,17 +206,7 @@ INSERT INTO PagosAlquiler (id, año, mes, valor, id_alquiler) VALUES
 (19, 2023, 9, 2200.00, 9),
 (20, 2023, 9, 2100.00, 10);
 
-INSERT INTO Inmueble (codigo_inmueble, direccion, metros_cuadrados) VALUES
-(1, 'Calle 123', 120.50),
-(2, 'Avenida XYZ', 150.25),
-(3, 'Plaza 789', 110.75),
-(4, 'Carretera 456', 130.00),
-(5, 'Calle ABC', 160.75),
-(6, 'Avenida 567', 140.25),
-(7, 'Plaza 234', 100.00),
-(8, 'Carretera 890', 170.50),
-(9, 'Calle 678', 180.25),
-(10, 'Avenida 012', 190.00);
+
 
 INSERT INTO Garajes (codigo_inmueble, numero_garaje, planta) VALUES
 (1, 1, 1),
