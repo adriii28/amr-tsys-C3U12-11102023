@@ -222,68 +222,210 @@ INSERT INTO publicaUsuarioComentario (id_usuario, id_comentario) VALUES
 UPDATE Usuario SET direccion = 'Nueva dirección 1' WHERE dni = '11111111';
 UPDATE Usuario SET nombre = 'Nuevo nombre 2' WHERE dni = '22222222';
 UPDATE Usuario SET esCelebridad = 1 WHERE dni = '33333333';
+UPDATE Usuario SET direccion = 'Otra dirección' WHERE dni = '44444444';
+UPDATE Usuario SET nombre = 'Otro nombre' WHERE dni = '55555555';
+UPDATE Usuario SET esCelebridad = 0 WHERE dni = '66666666';
+UPDATE Usuario SET direccion = 'Calle Nueva 7' WHERE dni = '77777777';
+UPDATE Usuario SET nombre = 'Pepe Pérez' WHERE dni = '88888888';
+UPDATE Usuario SET esCelebridad = 1 WHERE dni = '99999999';
+UPDATE Usuario SET direccion = 'Calle Principal 10' WHERE dni = '10101010';
 
 UPDATE Email SET correo_electronico = 'nuevo_email1@email.com' WHERE id_dato = 1;
 UPDATE Email SET correo_electronico = 'nuevo_email2@email.com' WHERE id_dato = 2;
+UPDATE Email SET correo_electronico = 'correo_actualizado1@email.com' WHERE id_dato = 3;
+UPDATE Email SET correo_electronico = 'correo_actualizado2@email.com' WHERE id_dato = 4;
+UPDATE Email SET correo_electronico = 'email@nuevo.com' WHERE id_dato = 5;
+UPDATE Email SET correo_electronico = 'email_actualizado1@email.com' WHERE id_dato = 6;
+UPDATE Email SET correo_electronico = 'email_actualizado2@email.com' WHERE id_dato = 7;
+UPDATE Email SET correo_electronico = 'email@dominio.com' WHERE id_dato = 8;
+UPDATE Email SET correo_electronico = 'nuevo_correo1@email.com' WHERE id_dato = 9;
+UPDATE Email SET correo_electronico = 'nuevo_correo2@email.com' WHERE id_dato = 10;
 
 UPDATE Telefono SET num_telefono = '999-999-9999' WHERE id_dato = 1;
 UPDATE Telefono SET num_telefono = '777-777-7777' WHERE id_dato = 2;
-
-UPDATE Email SET correo_electronico = 'nuevo_email3@email.com' WHERE id_dato = 3;
-UPDATE Email SET correo_electronico = 'nuevo_email4@email.com' WHERE id_dato = 4;
-
-UPDATE Telefono SET num_telefono = '666-666-6666' WHERE id_dato = 3;
-UPDATE Telefono SET num_telefono = '888-888-8888' WHERE id_dato = 4;
+UPDATE Telefono SET num_telefono = 'nuevo_telefono1' WHERE id_dato = 3;
+UPDATE Telefono SET num_telefono = 'nuevo_telefono2' WHERE id_dato = 4;
+UPDATE Telefono SET num_telefono = '123-456-7890' WHERE id_dato = 5;
+UPDATE Telefono SET num_telefono = 'telefono_actualizado1' WHERE id_dato = 6;
+UPDATE Telefono SET num_telefono = 'telefono_actualizado2' WHERE id_dato = 7;
+UPDATE Telefono SET num_telefono = '987-654-3210' WHERE id_dato = 8;
+UPDATE Telefono SET num_telefono = '555-555-5555' WHERE id_dato = 9;
+UPDATE Telefono SET num_telefono = '444-444-4444' WHERE id_dato = 10;
 
 UPDATE Contacto SET comentario_personal = 'Nuevo comentario 1' WHERE id = 1;
 UPDATE Contacto SET comentario_personal = 'Nuevo comentario 2' WHERE id = 2;
+UPDATE Contacto SET comentario_personal = 'Comentario actualizado 1' WHERE id = 3;
+UPDATE Contacto SET comentario_personal = 'Comentario actualizado 2' WHERE id = 4;
+UPDATE Contacto SET comentario_personal = 'Otro comentario' WHERE id = 5;
+UPDATE Contacto SET comentario_personal = 'Vecino amigable' WHERE id = 6;
+UPDATE Contacto SET comentario_personal = 'Comentario actualizado 3' WHERE id = 7;
+UPDATE Contacto SET comentario_personal = 'Comentario actualizado 4' WHERE id = 8;
+UPDATE Contacto SET comentario_personal = 'Amigo en línea' WHERE id = 9;
+UPDATE Contacto SET comentario_personal = 'Pariente muy lejano' WHERE id = 10;
 
 UPDATE Comentarios SET texto = 'Nuevo texto 1' WHERE id = 1;
 UPDATE Comentarios SET texto = 'Nuevo texto 2' WHERE id = 2;
+UPDATE Comentarios SET texto = 'Texto actualizado 1' WHERE id = 3;
+UPDATE Comentarios SET texto = 'Texto actualizado 2' WHERE id = 4;
+UPDATE Comentarios SET texto = 'Texto adicional' WHERE id = 5;
+UPDATE Comentarios SET texto = 'Comentario actualizado 1' WHERE id = 6;
+UPDATE Comentarios SET texto = 'Comentario actualizado 2' WHERE id = 7;
+UPDATE Comentarios SET texto = 'Nuevo comentario 3' WHERE id = 8;
+UPDATE Comentarios SET texto = 'Nuevo comentario 4' WHERE id = 9;
+UPDATE Comentarios SET texto = 'Comentario en línea' WHERE id = 10;
 
 UPDATE bloquearUsuario SET dni_session = '99999999' WHERE dni_user = '12345678';
 UPDATE bloquearUsuario SET dni_user = '99999999' WHERE dni_session = '88888888';
+UPDATE bloquearUsuario SET dni_session = '55555555' WHERE dni_user = '44444444';
+UPDATE bloquearUsuario SET dni_user = '11111111' WHERE dni_session = '10101010';
+UPDATE bloquearUsuario SET dni_session = '22222222' WHERE dni_user = '66666666';
+UPDATE bloquearUsuario SET dni_user = '88888888' WHERE dni_session = '44444444';
+UPDATE bloquearUsuario SET dni_session = '77777777' WHERE dni_user = '55555555';
+UPDATE bloquearUsuario SET dni_user = '22222222' WHERE dni_session = '11111111';
+UPDATE bloquearUsuario SET dni_session = '66666666' WHERE dni_user = '55555555';
+UPDATE bloquearUsuario SET dni_user = '44444444' WHERE dni_session = '88888888';
 
 UPDATE Grupo SET nombre = 'Grupo Actualizado 1' WHERE id = 1;
 UPDATE Grupo SET nombre = 'Grupo Actualizado 2' WHERE id = 2;
+UPDATE Grupo SET nombre = 'Nuevo Grupo 3' WHERE id = 3;
+UPDATE Grupo SET nombre = 'Grupo Renombrado 4' WHERE id = 4;
+UPDATE Grupo SET nombre = 'Grupo de Amigos' WHERE id = 5;
+UPDATE Grupo SET nombre = 'Grupo 6' WHERE id = 6;
+UPDATE Grupo SET nombre = 'Grupo 7' WHERE id = 7;
+UPDATE Grupo SET nombre = 'Nuevo Grupo 8' WHERE id = 8;
+UPDATE Grupo SET nombre = 'Grupo Modificado 9' WHERE id = 9;
+UPDATE Grupo SET nombre = 'Grupo 10' WHERE id = 10;
 
 UPDATE publicaUsuarioComentario SET id_comentario = 6 WHERE id_usuario = '12345678';
 UPDATE publicaUsuarioComentario SET id_usuario = '88888888' WHERE id_comentario = 2;
+UPDATE publicaUsuarioComentario SET id_comentario = 9 WHERE id_usuario = '33333333';
+UPDATE publicaUsuarioComentario SET id_usuario = '55555555' WHERE id_comentario = 4;
+UPDATE publicaUsuarioComentario SET id_comentario = 5 WHERE id_usuario = '11111111';
+UPDATE publicaUsuarioComentario SET id_usuario = '10101010' WHERE id_comentario = 7;
+UPDATE publicaUsuarioComentario SET id_comentario = 1 WHERE id_usuario = '77777777';
+UPDATE publicaUsuarioComentario SET id_usuario = '99999999' WHERE id_comentario = 8;
+UPDATE publicaUsuarioComentario SET id_comentario = 10 WHERE id_usuario = '66666666';
+UPDATE publicaUsuarioComentario SET id_usuario = '44444444' WHERE id_comentario = 3;
+
 
 -- -----------------------------------DELETES------------------------------------------------
-
+DELETE FROM Usuario WHERE dni = '11111111';
+DELETE FROM Usuario WHERE dni = '22222222';
+DELETE FROM Usuario WHERE dni = '33333333';
 DELETE FROM Usuario WHERE dni = '44444444';
 DELETE FROM Usuario WHERE dni = '55555555';
+DELETE FROM Usuario WHERE dni = '66666666';
+DELETE FROM Usuario WHERE dni = '77777777';
+DELETE FROM Usuario WHERE dni = '88888888';
+DELETE FROM Usuario WHERE dni = '99999999';
+DELETE FROM Usuario WHERE dni = '10101010';
 
 DELETE FROM bloquearUsuario WHERE dni_user = '11111111' AND dni_session = '22222222';
 DELETE FROM bloquearUsuario WHERE dni_user = '33333333' AND dni_session = '44444444';
+DELETE FROM bloquearUsuario WHERE dni_user = '22222222' AND dni_session = '55555555';
+DELETE FROM bloquearUsuario WHERE dni_user = '44444444' AND dni_session = '11111111';
+DELETE FROM bloquearUsuario WHERE dni_user = '55555555' AND dni_session = '33333333';
+DELETE FROM bloquearUsuario WHERE dni_user = '66666666' AND dni_session = '77777777';
+DELETE FROM bloquearUsuario WHERE dni_user = '77777777' AND dni_session = '88888888';
+DELETE FROM bloquearUsuario WHERE dni_user = '88888888' AND dni_session = '99999999';
+DELETE FROM bloquearUsuario WHERE dni_user = '99999999' AND dni_session = '10101010';
+DELETE FROM bloquearUsuario WHERE dni_user = '10101010' AND dni_session = '11111111';
 
+DELETE FROM Email WHERE id_dato = 1;
+DELETE FROM Email WHERE id_dato = 2;
 DELETE FROM Email WHERE id_dato = 3;
 DELETE FROM Email WHERE id_dato = 4;
-
-DELETE FROM Telefono WHERE id_dato = 4;
-DELETE FROM Telefono WHERE id_dato = 5;
-
 DELETE FROM Email WHERE id_dato = 5;
 DELETE FROM Email WHERE id_dato = 6;
+DELETE FROM Email WHERE id_dato = 7;
+DELETE FROM Email WHERE id_dato = 8;
+DELETE FROM Email WHERE id_dato = 9;
+DELETE FROM Email WHERE id_dato = 10;
 
+DELETE FROM Telefono WHERE id_dato = 1;
+DELETE FROM Telefono WHERE id_dato = 2;
+DELETE FROM Telefono WHERE id_dato = 3;
+DELETE FROM Telefono WHERE id_dato = 4;
 DELETE FROM Telefono WHERE id_dato = 5;
 DELETE FROM Telefono WHERE id_dato = 6;
+DELETE FROM Telefono WHERE id_dato = 7;
+DELETE FROM Telefono WHERE id_dato = 8;
+DELETE FROM Telefono WHERE id_dato = 9;
+DELETE FROM Telefono WHERE id_dato = 10;
 
+DELETE FROM Contacto WHERE id = 1;
+DELETE FROM Contacto WHERE id = 2;
+DELETE FROM Contacto WHERE id = 3;
 DELETE FROM Contacto WHERE id = 4;
 DELETE FROM Contacto WHERE id = 5;
+DELETE FROM Contacto WHERE id = 6;
+DELETE FROM Contacto WHERE id = 7;
+DELETE FROM Contacto WHERE id = 8;
+DELETE FROM Contacto WHERE id = 9;
+DELETE FROM Contacto WHERE id = 10;
 
+DELETE FROM Comentarios WHERE id = 1;
+DELETE FROM Comentarios WHERE id = 2;
+DELETE FROM Comentarios WHERE id = 3;
 DELETE FROM Comentarios WHERE id = 4;
 DELETE FROM Comentarios WHERE id = 5;
+DELETE FROM Comentarios WHERE id = 6;
+DELETE FROM Comentarios WHERE id = 7;
+DELETE FROM Comentarios WHERE id = 8;
+DELETE FROM Comentarios WHERE id = 9;
+DELETE FROM Comentarios WHERE id = 10;
 
+DELETE FROM Grupo WHERE id = 1;
+DELETE FROM Grupo WHERE id = 2;
+DELETE FROM Grupo WHERE id = 3;
 DELETE FROM Grupo WHERE id = 4;
 DELETE FROM Grupo WHERE id = 5;
+DELETE FROM Grupo WHERE id = 6;
+DELETE FROM Grupo WHERE id = 7;
+DELETE FROM Grupo WHERE id = 8;
+DELETE FROM Grupo WHERE id = 9;
+DELETE FROM Grupo WHERE id = 10;
 
 DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 1;
 DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 2;
+DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 3;
+DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 4;
+DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 5;
+DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 6;
+DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 7;
+DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 8;
+DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 9;
+DELETE FROM organizaUsuarioGrupo WHERE id_grupo = 10;
 
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 1;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 2;
 DELETE FROM formaParteContactoGrupo WHERE id_contacto = 3;
 DELETE FROM formaParteContactoGrupo WHERE id_contacto = 4;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 5;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 6;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 7;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 8;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 9;
+DELETE FROM formaParteContactoGrupo WHERE id_contacto = 10;
 
 DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 1;
 DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 2;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 3;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 4;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 5;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 6;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 7;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 8;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 9;
+DELETE FROM puede_verGrupoContactoComentario WHERE id_comentario = 10;
+
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '11111111';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '22222222';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '33333333';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '44444444';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '55555555';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '66666666';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '77777777';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '88888888';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '99999999';
+DELETE FROM publicaUsuarioComentario WHERE id_usuario = '10101010';
