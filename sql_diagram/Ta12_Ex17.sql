@@ -190,68 +190,201 @@ INSERT INTO HorarioEscolar (id, dia_semana, hora_dia, id_curso) VALUES
 (10, 'Miércoles', '18:00:00', 10);
 
 -- -----------------------------------UPDATES------------------------------------------------
-
 UPDATE Profesor SET direccion = 'Nueva dirección 1' WHERE DNI = '11111111';
 UPDATE Profesor SET telefono = '999-999-9999' WHERE DNI = '22222222';
 UPDATE Profesor SET años_antiguedad = 10 WHERE DNI = '33333333';
+UPDATE Profesor SET correo_electronico = 'nuevo_correo@email.com' WHERE DNI = '44444444';
+UPDATE Profesor SET num_seg_social = '555555555F' WHERE DNI = '55555555';
+UPDATE Profesor SET codigo_interno = 110 WHERE DNI = '66666666';
+UPDATE Profesor SET direccion = 'Otra dirección' WHERE DNI = '77777777';
+UPDATE Profesor SET nombre = 'Nuevo Nombre' WHERE DNI = '88888888';
+UPDATE Profesor SET años_antiguedad = 11 WHERE DNI = '99999999';
+UPDATE Profesor SET telefono = '123-456-7890' WHERE DNI = '12345678';
 
 UPDATE Asignatura SET nombre = 'Nueva Asignatura 1' WHERE id = 1;
 UPDATE Asignatura SET fecha_finalizacion = '2023-12-30' WHERE id = 2;
 UPDATE Asignatura SET curso_ciclo = 2 WHERE id = 3;
+UPDATE Asignatura SET codigo_interno_centro = 1005 WHERE id = 4;
+UPDATE Asignatura SET id_profesor = '66666666' WHERE id = 5;
+UPDATE Asignatura SET entidad = 'Nuevo Centro' WHERE id = 6;
+UPDATE Asignatura SET codigo_europeo = 'ES-NEW-123' WHERE id = 7;
+UPDATE Asignatura SET fecha_inicio = '2023-09-15' WHERE id = 8;
+UPDATE Asignatura SET nombre = 'Otra Asignatura' WHERE id = 9;
+UPDATE Asignatura SET curso_ciclo = 3 WHERE id = 10;
 
 UPDATE Requiere SET nombre = 'Nuevo Requisito 1' WHERE id_asignatura_pedido = 1 AND id_asignatura_nuevo = 2;
 UPDATE Requiere SET nombre = 'Nuevo Requisito 2' WHERE id_asignatura_pedido = 3 AND id_asignatura_nuevo = 4;
 UPDATE Requiere SET nombre = 'Nuevo Requisito 3' WHERE id_asignatura_pedido = 2 AND id_asignatura_nuevo = 5;
+UPDATE Requiere SET nombre = 'Otro Requisito' WHERE id_asignatura_pedido = 4 AND id_asignatura_nuevo = 1;
+UPDATE Requiere SET nombre = 'Prerrequisito Modificado' WHERE id_asignatura_pedido = 5 AND id_asignatura_nuevo = 3;
+UPDATE Requiere SET nombre = 'Requisito Actualizado' WHERE id_asignatura_pedido = 6 AND id_asignatura_nuevo = 7;
+UPDATE Requiere SET nombre = 'Nueva Requisito' WHERE id_asignatura_pedido = 7 AND id_asignatura_nuevo = 8;
+UPDATE Requiere SET nombre = 'Requisito Importante' WHERE id_asignatura_pedido = 8 AND id_asignatura_nuevo = 9;
+UPDATE Requiere SET nombre = 'Requisito Esencial' WHERE id_asignatura_pedido = 9 AND id_asignatura_nuevo = 10;
+UPDATE Requiere SET nombre = 'Requisito Fundamental' WHERE id_asignatura_pedido = 10 AND id_asignatura_nuevo = 1;
 
 UPDATE Ciclo SET nombre = 'Ciclo Modificado 1' WHERE id = 101;
 UPDATE Ciclo SET tipo = 'Tipo Modificado 2' WHERE id = 102;
 UPDATE Ciclo SET codigo_interno = 10010 WHERE id = 103;
 UPDATE Ciclo SET id_curso = 10 WHERE id = 104;
+UPDATE Ciclo SET nombre = 'Otro Ciclo' WHERE id = 105;
+UPDATE Ciclo SET tipo = 'Nuevo Tipo' WHERE id = 106;
+UPDATE Ciclo SET codigo_interno = 10020 WHERE id = 107;
+UPDATE Ciclo SET id_curso = 1 WHERE id = 108;
+UPDATE Ciclo SET nombre = 'Ciclo Actualizado' WHERE id = 109;
+UPDATE Ciclo SET tipo = 'Tipo Especial' WHERE id = 110;
 
 UPDATE Importe SET id_ciclo = 102 WHERE id_asignatura = 1;
 UPDATE Importe SET id_asignatura = 3 WHERE id_ciclo = 103;
+UPDATE Importe SET id_ciclo = 104 WHERE id_asignatura = 4;
+UPDATE Importe SET id_asignatura = 5 WHERE id_ciclo = 105;
+UPDATE Importe SET id_ciclo = 106 WHERE id_asignatura = 6;
+UPDATE Importe SET id_asignatura = 7 WHERE id_ciclo = 107;
+UPDATE Importe SET id_ciclo = 108 WHERE id_asignatura = 8;
+UPDATE Importe SET id_asignatura = 9 WHERE id_ciclo = 109;
+UPDATE Importe SET id_ciclo = 110 WHERE id_asignatura = 10;
+UPDATE Importe SET id_ciclo = 101 WHERE id_asignatura = 1;
 
 UPDATE Aula SET nombre = 'Aula Modificada 1' WHERE id = 1;
 UPDATE Aula SET numero_aula = 103 WHERE id = 2;
 UPDATE Aula SET codigo = 'AulaMod' WHERE id = 3;
 UPDATE Aula SET metros_cuadrados = 150 WHERE id = 4;
+UPDATE Aula SET nombre = 'Nueva Aula' WHERE id = 5;
+UPDATE Aula SET numero_aula = 105 WHERE id = 6;
+UPDATE Aula SET codigo = 'AulaNueva' WHERE id = 7;
+UPDATE Aula SET metros_cuadrados = 160 WHERE id = 8;
+UPDATE Aula SET nombre = 'Aula Actualizada' WHERE id = 9;
+UPDATE Aula SET numero_aula = 109 WHERE id = 10;
 
 UPDATE Ocupa SET id_aula = 1 WHERE id_asignatura = 1;
 UPDATE Ocupa SET id_asignatura = 3 WHERE id_aula = 3;
+UPDATE Ocupa SET id_aula = 4 WHERE id_asignatura = 4;
+UPDATE Ocupa SET id_asignatura = 5 WHERE id_aula = 5;
+UPDATE Ocupa SET id_aula = 6 WHERE id_asignatura = 6;
+UPDATE Ocupa SET id_aula = 7 WHERE id_asignatura = 7;
+UPDATE Ocupa SET id_aula = 8 WHERE id_asignatura = 8;
+UPDATE Ocupa SET id_aula = 9 WHERE id_asignatura = 9;
+UPDATE Ocupa SET id_aula = 10 WHERE id_asignatura = 10;
+UPDATE Ocupa SET id_aula = 2 WHERE id_asignatura = 1;
 
 UPDATE Curso SET dia_semana = 'Nuevo Día 1' WHERE id = 1;
 UPDATE Curso SET hora_dia = '10:00:00' WHERE id = 2;
+UPDATE Curso SET dia_semana = 'Otro Día' WHERE id = 3;
+UPDATE Curso SET hora_dia = '11:00:00' WHERE id = 4;
+UPDATE Curso SET dia_semana = 'Nuevo Día 2' WHERE id = 5;
+UPDATE Curso SET hora_dia = '12:00:00' WHERE id = 6;
+UPDATE Curso SET dia_semana = 'Otro Día 2' WHERE id = 7;
+UPDATE Curso SET hora_dia = '13:00:00' WHERE id = 8;
+UPDATE Curso SET dia_semana = 'Nuevo Día 3' WHERE id = 9;
+UPDATE Curso SET hora_dia = '14:00:00' WHERE id = 10;
 
 UPDATE HorarioEscolar SET dia_semana = 'Lunes' WHERE id = 1;
 UPDATE HorarioEscolar SET hora_dia = '08:00:00' WHERE id = 2;
+UPDATE HorarioEscolar SET dia_semana = 'Martes' WHERE id = 3;
+UPDATE HorarioEscolar SET hora_dia = '09:00:00' WHERE id = 4;
+UPDATE HorarioEscolar SET dia_semana = 'Miércoles' WHERE id = 5;
+UPDATE HorarioEscolar SET hora_dia = '10:00:00' WHERE id = 6;
+UPDATE HorarioEscolar SET dia_semana = 'Jueves' WHERE id = 7;
+UPDATE HorarioEscolar SET hora_dia = '11:00:00' WHERE id = 8;
+UPDATE HorarioEscolar SET dia_semana = 'Viernes' WHERE id = 9;
+UPDATE HorarioEscolar SET hora_dia = '12:00:00' WHERE id = 10;
 
 -- -----------------------------------DELETES------------------------------------------------
-
+DELETE FROM Profesor WHERE DNI = '66666666';
+DELETE FROM Profesor WHERE DNI = '77777777';
+DELETE FROM Profesor WHERE DNI = '88888888';
+DELETE FROM Profesor WHERE DNI = '99999999';
+DELETE FROM Profesor WHERE DNI = '12345678';
+DELETE FROM Profesor WHERE DNI = '11111111';
+DELETE FROM Profesor WHERE DNI = '22222222';
+DELETE FROM Profesor WHERE DNI = '33333333';
 DELETE FROM Profesor WHERE DNI = '44444444';
 DELETE FROM Profesor WHERE DNI = '55555555';
 
-DELETE FROM Asignatura WHERE id = 3;
 DELETE FROM Asignatura WHERE id = 4;
+DELETE FROM Asignatura WHERE id = 5;
+DELETE FROM Asignatura WHERE id = 6;
+DELETE FROM Asignatura WHERE id = 7;
+DELETE FROM Asignatura WHERE id = 8;
+DELETE FROM Asignatura WHERE id = 9;
+DELETE FROM Asignatura WHERE id = 10;
+DELETE FROM Asignatura WHERE id = 1;
+DELETE FROM Asignatura WHERE id = 2;
+DELETE FROM Asignatura WHERE id = 3;
 
 DELETE FROM Requiere WHERE id_asignatura_pedido = 1 AND id_asignatura_nuevo = 2;
-DELETE FROM Requiere WHERE id_asignatura_pedido = 2 AND id_asignatura_nuevo = 3;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 3 AND id_asignatura_nuevo = 4;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 2 AND id_asignatura_nuevo = 5;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 4 AND id_asignatura_nuevo = 1;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 5 AND id_asignatura_nuevo = 3;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 6 AND id_asignatura_nuevo = 7;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 7 AND id_asignatura_nuevo = 8;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 8 AND id_asignatura_nuevo = 9;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 9 AND id_asignatura_nuevo = 10;
+DELETE FROM Requiere WHERE id_asignatura_pedido = 10 AND id_asignatura_nuevo = 1;
 
+DELETE FROM Ciclo WHERE id = 5;
+DELETE FROM Ciclo WHERE id = 6;
+DELETE FROM Ciclo WHERE id = 7;
+DELETE FROM Ciclo WHERE id = 8;
+DELETE FROM Ciclo WHERE id = 9;
+DELETE FROM Ciclo WHERE id = 10;
 DELETE FROM Ciclo WHERE id = 1;
 DELETE FROM Ciclo WHERE id = 2;
+DELETE FROM Ciclo WHERE id = 3;
+DELETE FROM Ciclo WHERE id = 4;
 
-DELETE FROM Importe WHERE id_asignatura = 1 AND id_ciclo = 2;
-DELETE FROM Importe WHERE id_asignatura = 3 AND id_ciclo = 4;
+DELETE FROM Importe WHERE id_asignatura = 3 AND id_ciclo = 103;
+DELETE FROM Importe WHERE id_asignatura = 5 AND id_ciclo = 105;
+DELETE FROM Importe WHERE id_asignatura = 7 AND id_ciclo = 107;
+DELETE FROM Importe WHERE id_asignatura = 9 AND id_ciclo = 109;
+DELETE FROM Importe WHERE id_asignatura = 1 AND id_ciclo = 101;
+DELETE FROM Importe WHERE id_asignatura = 2 AND id_ciclo = 102;
+DELETE FROM Importe WHERE id_asignatura = 4 AND id_ciclo = 104;
+DELETE FROM Importe WHERE id_asignatura = 6 AND id_ciclo = 106;
+DELETE FROM Importe WHERE id_asignatura = 8 AND id_ciclo = 108;
+DELETE FROM Importe WHERE id_asignatura = 10 AND id_ciclo = 110;
 
+DELETE FROM Aula WHERE id = 4;
+DELETE FROM Aula WHERE id = 5;
+DELETE FROM Aula WHERE id = 6;
+DELETE FROM Aula WHERE id = 7;
+DELETE FROM Aula WHERE id = 8;
+DELETE FROM Aula WHERE id = 9;
+DELETE FROM Aula WHERE id = 10;
 DELETE FROM Aula WHERE id = 1;
 DELETE FROM Aula WHERE id = 2;
+DELETE FROM Aula WHERE id = 3;
 
-DELETE FROM Ocupa WHERE id_asignatura = 1 AND id_aula = 2;
-DELETE FROM Ocupa WHERE id_asignatura = 2 AND id_aula = 3;
+DELETE FROM Ocupa WHERE id_asignatura = 2 AND id_aula = 2;
+DELETE FROM Ocupa WHERE id_asignatura = 4 AND id_aula = 4;
+DELETE FROM Ocupa WHERE id_asignatura = 6 AND id_aula = 6;
+DELETE FROM Ocupa WHERE id_asignatura = 8 AND id_aula = 8;
+DELETE FROM Ocupa WHERE id_asignatura = 10 AND id_aula = 10;
+DELETE FROM Ocupa WHERE id_asignatura = 1 AND id_aula = 1;
+DELETE FROM Ocupa WHERE id_asignatura = 3 AND id_aula = 3;
+DELETE FROM Ocupa WHERE id_asignatura = 5 AND id_aula = 5;
+DELETE FROM Ocupa WHERE id_asignatura = 7 AND id_aula = 7;
+DELETE FROM Ocupa WHERE id_asignatura = 9 AND id_aula = 9;
 
+DELETE FROM Curso WHERE id = 9;
+DELETE FROM Curso WHERE id = 10;
 DELETE FROM Curso WHERE id = 1;
 DELETE FROM Curso WHERE id = 2;
+DELETE FROM Curso WHERE id = 3;
+DELETE FROM Curso WHERE id = 4;
+DELETE FROM Curso WHERE id = 5;
+DELETE FROM Curso WHERE id = 6;
+DELETE FROM Curso WHERE id = 7;
+DELETE FROM Curso WHERE id = 8;
 
+DELETE FROM HorarioEscolar WHERE id = 9;
+DELETE FROM HorarioEscolar WHERE id = 10;
 DELETE FROM HorarioEscolar WHERE id = 1;
 DELETE FROM HorarioEscolar WHERE id = 2;
-
-
+DELETE FROM HorarioEscolar WHERE id = 3;
+DELETE FROM HorarioEscolar WHERE id = 4;
+DELETE FROM HorarioEscolar WHERE id = 5;
+DELETE FROM HorarioEscolar WHERE id = 6;
+DELETE FROM HorarioEscolar WHERE id = 7;
+DELETE FROM HorarioEscolar WHERE id = 8;
