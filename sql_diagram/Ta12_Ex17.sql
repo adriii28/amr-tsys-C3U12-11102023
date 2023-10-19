@@ -68,15 +68,15 @@ CREATE TABLE Ocupa (
 );
 
 CREATE TABLE Curso (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     dia_semana VARCHAR(15),
-    hora_dia DATE
+    hora_dia TIME
 );
 
 CREATE TABLE HorarioEscolar (
     id INT PRIMARY KEY,
     dia_semana VARCHAR(15) NOT NULL,
-    hora_dia DATE NOT NULL,
+    hora_dia TIME NOT NULL,
     id_curso INT,
     FOREIGN KEY (id_curso) REFERENCES Curso(id) ON DELETE CASCADE
 );
@@ -165,17 +165,17 @@ INSERT INTO Ocupa (id_asignatura, id_aula) VALUES
 (9, 9),
 (10, 10);
 
-INSERT INTO Curso (id, dia_semana, hora_dia) VALUES
-(1, 'Lunes', '09:00:00'),
-(2, 'Martes', '10:00:00'),
-(3, 'Miércoles', '11:00:00'),
-(4, 'Jueves', '12:00:00'),
-(5, 'Viernes', '13:00:00'),
-(6, 'Sábado', '14:00:00'),
-(7, 'Domingo', '15:00:00'),
-(8, 'Lunes', '16:00:00'),
-(9, 'Martes', '17:00:00'),
-(10, 'Miércoles', '18:00:00');
+INSERT INTO Curso (dia_semana, hora_dia) VALUES
+('Lunes', '09:00:00'),
+('Martes', '10:00:00'),
+('Miércoles', '11:00:00'),
+('Jueves', '12:00:00'),
+('Viernes', '13:00:00'),
+('Sábado', '14:00:00'),
+('Domingo', '15:00:00'),
+('Lunes', '16:00:00'),
+('Martes', '17:00:00'),
+('Miércoles', '18:00:00');
 
 INSERT INTO HorarioEscolar (id, dia_semana, hora_dia, id_curso) VALUES
 (1, 'Lunes', '09:00:00', 1),
