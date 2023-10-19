@@ -3,19 +3,19 @@ CREATE DATABASE Vuelos;
 USE Vuelos;
 
 CREATE TABLE Clientes(
-dni varchar(20),
-nombre varchar(20),
-apellidos varchar(20),
+dni varchar(20) ,
+nombre varchar(20) not null,
+apellidos varchar(20) not null,
 direccion varchar(20),
-tarjeta_credito int,
+tarjeta_credito int not null,
 PRIMARY KEY (dni)
 );
 
 CREATE TABLE Aeropuerto (
 id_aero int auto_increment,
-nombre varchar(20),
-localidad varchar(20),
-pais varchar(20),
+nombre varchar(20) not null,
+localidad varchar(20) not null,
+pais varchar(20) not null,
 PRIMARY KEY (id_aero)
 );
 
@@ -25,8 +25,8 @@ hora_salida time,
 hora_llegada time,
 fecha_salida date,
 fecha_llegada date,
-id_aerop_salida int,
-id_aerop_llegada int,
+id_aerop_salida int not null,
+id_aerop_llegada int not null,
 PRIMARY KEY (id_vuelo),
 FOREIGN KEY (id_aerop_salida) REFERENCES Aeropuerto(id_aero)
 ON DELETE CASCADE ON UPDATE CASCADE,
@@ -37,7 +37,7 @@ ON DELETE CASCADE ON UPDATE CASCADE
 CREATE TABLE TarjetaEmbarque(
 num_tarjeta_embarque int auto_increment,
 dni_cliente varchar(20),
-id_vuelo int,
+id_vuelo int not null,
 PRIMARY KEY (num_tarjeta_embarque),
 FOREIGN KEY (dni_cliente) REFERENCES Clientes(dni)
 ON DELETE CASCADE ON UPDATE CASCADE,
@@ -54,8 +54,8 @@ PRIMARY KEY (id_plaza)
 CREATE TABLE Avion(
 id_avion int auto_increment,
 num_plazas int,
-id_plaza int,
-id_vuelo int,
+id_plaza int not null,
+id_vuelo int not null,
 PRIMARY KEY (id_avion),
 FOREIGN KEY (id_plaza) REFERENCES Plazas(id_plaza)
 ON DELETE CASCADE ON UPDATE CASCADE,

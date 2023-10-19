@@ -11,11 +11,11 @@ PRIMARY KEY (nombre)
 
 CREATE TABLE Partidos (
 id_partido int auto_increment,
-estadio varchar(20),
-equipo1 varchar(20),
-equipo2 varchar(20),
+estadio varchar(20) not null,
+equipo1 varchar(20) not null,
+equipo2 varchar(20) not null,
 fecha_partido date,
-nombre_liga varchar(20),
+nombre_liga varchar(20) not null,
 PRIMARY KEY (id_partido),
 FOREIGN KEY (nombre_liga) REFERENCES Liga(nombre)
 ON DELETE CASCADE ON UPDATE CASCADE
@@ -23,9 +23,9 @@ ON DELETE CASCADE ON UPDATE CASCADE
 
 CREATE TABLE Equipo (
 id int auto_increment,
-nombre_equipo varchar(20),
+nombre_equipo varchar(20) not null,
 pais varchar(20),
-entrendador varchar(20),
+entrendador varchar(20) not null,
 PRIMARY KEY (id)
 );
 
@@ -41,10 +41,10 @@ ON DELETE CASCADE ON UPDATE CASCADE
 
 CREATE TABLE Jugador (
 dni varchar(20),
-nombre varchar(20),
-posicion varchar(20),
+nombre varchar(20) not null,
+posicion varchar(20) not null,
 fecha_nacimiento date,
-id_equipo int,
+id_equipo int not null,
 PRIMARY KEY (dni),
 FOREIGN KEY (id_equipo) REFERENCES Equipo(id)
 ON DELETE CASCADE ON UPDATE CASCADE

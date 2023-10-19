@@ -4,15 +4,15 @@ USE EmpresaSoftware;
 
 CREATE TABLE Profesion (
 id int auto_increment,
-codigo_profesion int,
-nombre varchar(20),
+codigo_profesion int not null,
+nombre varchar(20) not null,
 PRIMARY KEY (id)
 );
 
 CREATE TABLE Trabajador (
 dni varchar(20),
-nombre varchar(20),
-apellidos varchar(20),
+nombre varchar(20) not null,
+apellidos varchar(20) not null,
 PRIMARY KEY (dni)
 );
 
@@ -28,7 +28,7 @@ ON DELETE CASCADE ON UPDATE CASCADE
 
 CREATE TABLE Proyecto(
 id int auto_increment,
-nombre varchar(20),
+nombre varchar(20) not null,
 fecha_inicio date,
 fecha_fin date,
 PRIMARY KEY (id)
@@ -47,9 +47,9 @@ ON DELETE CASCADE ON UPDATE CASCADE
 
 CREATE TABLE Empresa (
 cif varchar(20),
-nombre varchar(20),
+nombre varchar(20) not null,
 direccion varchar(20),
-codigo_interno int,
+codigo_interno int not null,
 telefono int,
 PRIMARY KEY (cif)
 );

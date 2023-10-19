@@ -2,17 +2,12 @@ CREATE DATABASE EmpresaComida;
 
 USE EmpresaComida;
 
-drop table EstarACargo;
-drop table Pinche;
-drop table Cocinar;
-drop table Cocinero;
-
 CREATE TABLE Pinche (
 dni varchar(20),
-nombre varchar(20),
-apellidos varchar(20),
+nombre varchar(20) not null,
+apellidos varchar(20) not null,
 fecha_nacimiento date,
-num_seguridad_social int,
+num_seguridad_social int not null,
 telefono_fijo int,
 telefono_movil int,
 PRIMARY KEY (dni)
@@ -20,10 +15,10 @@ PRIMARY KEY (dni)
 
 CREATE TABLE Cocinero (
 dni varchar(20),
-nombre varchar(20),
-apellidos varchar(20),
+nombre varchar(20) not null,
+apellidos varchar(20) not null,
 fecha_nacimiento date,
-num_seguridad_social int,
+num_seguridad_social int not null,
 telefono_fijo int,
 telefono_movil int,
 años_servicio varchar(20),
@@ -42,8 +37,8 @@ ON DELETE CASCADE ON UPDATE CASCADE
 
 CREATE TABLE Plato(
 id int auto_increment,
-nombre varchar(20),
-precio double,
+nombre varchar(20) not null,
+precio double not null,
 tipo varchar(20),
 PRIMARY KEY (id)
 );
@@ -61,8 +56,8 @@ ON DELETE CASCADE ON UPDATE CASCADE
 
 CREATE TABLE Almacen(
 id int auto_increment,
-nombre varchar(20),
-num_almacen int,
+nombre varchar(20) not null,
+num_almacen int not null,
 descripcion varchar(200),
 PRIMARY KEY (id)
 );
@@ -71,20 +66,16 @@ CREATE TABLE Estante(
 id int auto_increment,
 letras varchar(20),
 tamano_centimetros int,
-id_almacen int,
+id_almacen int not null,
 PRIMARY KEY (id),
 FOREIGN KEY (id_almacen) REFERENCES Almacen(id)
 ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-Drop table Estante;
-drop table Ingredientes;
-drop table Contiene;
-
 CREATE TABLE Ingredientes(
 id int auto_increment,
 nombre varchar(20),
-id_estante int,
+id_estante int not null,
 PRIMARY KEY (id),
 FOREIGN KEY (id_estante) REFERENCES Estante(id)
 ON DELETE CASCADE ON UPDATE CASCADE
